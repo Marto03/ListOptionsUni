@@ -34,7 +34,7 @@ namespace ListsOptionsUI.ViewModels
             
             OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel)));
             OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
-            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребителите", new UserDetailsView(userDetailsViewModel)));
+            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
             this.userViewModel = userViewModel;
         }
         public UserViewModel UserViewModel

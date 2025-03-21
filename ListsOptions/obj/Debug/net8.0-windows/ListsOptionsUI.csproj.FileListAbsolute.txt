@@ -82,3 +82,4 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\obj\Debug\net8.0-windo
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\obj\Debug\net8.0-windows\ref\ListsOptionsUI.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\obj\Debug\net8.0-windows\Views\UserDetailsView.g.cs
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\obj\Debug\net8.0-windows\Views\UserDetailsView.baml
+C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\obj\Debug\net8.0-windows\ListsOptionsUI.sourcelink.json

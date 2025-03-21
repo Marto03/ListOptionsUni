@@ -58,8 +58,8 @@ namespace ListsOptionsUI.ViewModels
 
             AddUserCommand = new RelayCommand((o) => OpenExpander());
             SaveNewUserCommand = new RelayCommand(async _ => await SaveUserAsync(), _ => CanSaveUser);
-            DeleteUserCommand = new RelayCommand(async _ => await DeleteUserAsync(), _ => SelectedUser != null);
-            ConfigureUserCommand = new RelayCommand(async _ => await ConfigureUser());
+            DeleteUserCommand = new RelayCommand(async _ => await DeleteUserAsync(), _ => SelectedUser != null && CurrentUser?.Type == UserTypeEnum.Admin);
+            ConfigureUserCommand = new RelayCommand(async _ => await ConfigureUser(), _ => SelectedUser != null && CurrentUser?.Type == UserTypeEnum.Admin);
 
             NewUser = new UserModel();
             LoadUsersAsync();

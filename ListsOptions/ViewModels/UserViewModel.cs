@@ -23,7 +23,6 @@ public class UserViewModel : BaseViewModel
         UserDetailsVM = new UserDetailsViewModel(userService);
     }
 
-    public string? CurrentUser => UserSessionService.Instance.CurrentUser?.UserName; // Да бъде името !
     public UserDetailsViewModel UserDetailsVM { get; }
 
     public string Username

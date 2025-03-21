@@ -45,7 +45,11 @@
         </StackPanel>-->
 
         <StackPanel>
-            <TextBlock Text="{Binding CurrentUser}" />
+            <TextBlock
+                HorizontalAlignment="Right"
+                FontSize="14"
+                FontWeight="Bold"
+                Text="{Binding CurrentUser.UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <TextBlock
                 FontSize="20"
                 FontWeight="Bold"
