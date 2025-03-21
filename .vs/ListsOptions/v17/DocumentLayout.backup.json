@@ -1,0 +1,742 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\userdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\userdetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\userdetailsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\userdetailsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\facilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\facilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\roomtypeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\roomtypeview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\paymentmethodview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\paymentmethodview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\roomtypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\roomtypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\converters\\booleantovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\converters\\booleantovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\converters\\booleantoactivetabcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\converters\\booleantoactivetabcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\paymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\paymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\paymentmethodview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\paymentmethodview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\converters\\stringtovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\converters\\stringtovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\hoteldbcontextmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\hoteldbcontextmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\roomtypeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\roomtypeview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\enums\\usertypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\enums\\usertypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\dtos\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\dtos\\facilitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\roomtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\roomtypemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\enums\\roomtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\enums\\roomtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\dtos\\roomtypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\dtos\\roomtypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\facilityview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\facilityview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\enums\\paymentmethodtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\enums\\paymentmethodtypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\dtos\\paymentmethoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\dtos\\paymentmethoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\common\\enums\\facilitytypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BC4AD25-E221-46EF-85B1-FEE4A898E675}|Common\\Common.csproj|solutionrelative:common\\enums\\facilitytypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserDetailsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\UserDetailsView.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\Views\\UserDetailsView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:17:59.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\App.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml",
+              "RelativeToolTip": "ListsOptions\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T16:09:08.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDetailsView.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\UserDetailsView.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml",
+              "RelativeToolTip": "ListsOptions\\Views\\UserDetailsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T16:16:44.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAADgv2cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:58:05.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BooleanToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
+              "RelativeToolTip": "ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:58:17.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "StringToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\StringToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Converters\\StringToVisibilityConverter.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\StringToVisibilityConverter.cs",
+              "RelativeToolTip": "ListsOptions\\Converters\\StringToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:44:58.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserView.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\UserView.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserView.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\Views\\UserView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T10:14:43.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserView.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserView.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\UserView.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserView.xaml",
+              "RelativeToolTip": "ListsOptions\\Views\\UserView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T10:14:07.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PasswordBoxHelper.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Helpers\\PasswordBoxHelper.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Helpers\\PasswordBoxHelper.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Helpers\\PasswordBoxHelper.cs",
+              "RelativeToolTip": "ListsOptions\\Helpers\\PasswordBoxHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T09:59:50.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserSessionService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserSessionService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserSessionService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserSessionService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\UserSessionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T17:30:45.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T17:00:03.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\UserService.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAewH8AAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:56:09.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\BaseService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\BaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:27:00.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\UserTypeEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\UserTypeEnum.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\UserTypeEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\UserTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:45:39.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\UserModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:40:14.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FacilityViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\FacilityViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\FacilityViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\FacilityViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\FacilityViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:12:03.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RoomTypeView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\RoomTypeView.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\Views\\RoomTypeView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T16:41:38.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RoomTypeView.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\RoomTypeView.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml",
+              "RelativeToolTip": "ListsOptions\\Views\\RoomTypeView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T16:40:22.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RoomTypeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T16:32:01.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TabItemViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\TabItemViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\TabItemViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\TabItemViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\TabItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T16:29:39.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PaymentMethodViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T15:27:13.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PaymentMethodView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\PaymentMethodView.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\Views\\PaymentMethodView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T15:25:56.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PaymentMethodView.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\PaymentMethodView.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml",
+              "RelativeToolTip": "ListsOptions\\Views\\PaymentMethodView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-16T15:25:44.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BooleanToActiveTabColorConverter.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
+              "RelativeToolTip": "ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T14:26:49.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIA0wDUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T06:18:19.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FacilityView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\FacilityView.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\Views\\FacilityView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T16:26:37.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FacilityView.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\Views\\FacilityView.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml",
+              "RelativeToolTip": "ListsOptions\\Views\\FacilityView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-14T16:21:02.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Commands\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\Commands\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Commands\\RelayCommand.cs",
+              "RelativeToolTip": "ListsOptions\\Commands\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAtwA8AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T16:11:14.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml.cs",
+              "RelativeToolTip": "ListsOptions\\App.xaml.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAASwEYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:18:17.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "ListsOptions\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T14:12:45.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PaymentMethodService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentMethodService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\PaymentMethodService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentMethodService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\PaymentMethodService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvw8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T13:34:10.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FacilityService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\FacilityService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\FacilityService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\FacilityService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\FacilityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:03:46.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FacilityDTO.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\FacilityDTO.cs",
+              "RelativeDocumentMoniker": "Common\\DTOs\\FacilityDTO.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\FacilityDTO.cs",
+              "RelativeToolTip": "Common\\DTOs\\FacilityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:03:17.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "PaymentMethodDTO.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\PaymentMethodDTO.cs",
+              "RelativeDocumentMoniker": "Common\\DTOs\\PaymentMethodDTO.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\PaymentMethodDTO.cs",
+              "RelativeToolTip": "Common\\DTOs\\PaymentMethodDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAABOwBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:02:45.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "RoomTypeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\RoomTypeDTO.cs",
+              "RelativeDocumentMoniker": "Common\\DTOs\\RoomTypeDTO.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\DTOs\\RoomTypeDTO.cs",
+              "RelativeToolTip": "Common\\DTOs\\RoomTypeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAlwA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:02:17.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "RoomTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\RoomTypeEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\RoomTypeEnum.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\RoomTypeEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\RoomTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T12:01:13.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RoomTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\RoomTypeService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\RoomTypeService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\RoomTypeService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\RoomTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:53:18.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "FacilityTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\FacilityTypeEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\FacilityTypeEnum.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\FacilityTypeEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\FacilityTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:45:36.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PaymentMethodTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\PaymentMethodTypeEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\PaymentMethodTypeEnum.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\Common\\Enums\\PaymentMethodTypeEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\PaymentMethodTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA6wAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:48:43.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "RoomTypeModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\RoomTypeModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\RoomTypeModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\RoomTypeModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\RoomTypeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:24:06.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PaymentMethodModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentMethodModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\PaymentMethodModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentMethodModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\PaymentMethodModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:24:01.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HotelDbContextModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelDbContextModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\HotelDbContextModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelDbContextModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\HotelDbContextModel.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:23:35.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "FacilityModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\FacilityModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\FacilityModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\FacilityModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\FacilityModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:22:46.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ListsOptions\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\MainWindow.xaml",
+              "RelativeToolTip": "ListsOptions\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-14T11:22:01.024Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
