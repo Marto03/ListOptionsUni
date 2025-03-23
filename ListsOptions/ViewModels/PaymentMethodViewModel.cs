@@ -2,6 +2,7 @@
 using DataLayer.Services;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -34,11 +35,19 @@ namespace ListsOptionsUI.ViewModels
 
         private void AddPaymentMethod(object o)
         {
-            if (!string.IsNullOrWhiteSpace(NewPaymentMethod) && PaymentMethods.All(p=>!p.Name.ToLower().Contains(NewPaymentMethod.ToLower())))
+            if (!string.IsNullOrWhiteSpace(NewPaymentMethod) && !PaymentMethods.Any(p=>p.Name.ToLower().Contains(NewPaymentMethod.ToLower())))
             {
-                paymentMethodService.AddPaymentMethod(NewPaymentMethod);
-                PaymentMethods.Add(new PaymentMethodModel { Name = NewPaymentMethod, IsSystemDefined = true });
-                NewPaymentMethod = "";
+                try
+                {
+                    paymentMethodService.AddPaymentMethod(NewPaymentMethod);
+                    PaymentMethods.Add(new PaymentMethodModel { Name = NewPaymentMethod, IsSystemDefined = true });
+                    NewPaymentMethod = "";
+                }
+                catch (InvalidOperationException)
+                {
+                    MessageBox.Show("Платежният метод вече съществува!", "Невалиден метод", MessageBoxButton.OK);
+                }
+
                 //roomTypeService.SaveChanges();
             }
         }

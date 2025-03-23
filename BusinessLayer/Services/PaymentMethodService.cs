@@ -27,7 +27,7 @@ namespace DataLayer.Services
             else
             {
                 // Ако името не съвпада с енум стойност, го запазваме като потребителско добавено (Name)
-                var amenity = new PaymentMethodModel { Name = name , IsSystemDefined = false};
+                var amenity = new PaymentMethodModel { Name = name };
                 _context.Add(amenity);
             }
             _context.SaveChanges();

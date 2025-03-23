@@ -5,14 +5,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ListsOptionsUI.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:t="Filt"
     xmlns:u="ListsOptionsUI.ViewModels.FacilityViewModel"
     xmlns:v="clr-namespace:ListsOptionsUI.ViewModels"
-    Width="800"
-    Height="450"
     mc:Ignorable="d">
     <Grid>
-
         <StackPanel>
             <TextBox Width="200" Text="{Binding NewFacilityName, UpdateSourceTrigger=PropertyChanged}" />
             <Button

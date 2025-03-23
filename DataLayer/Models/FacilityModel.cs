@@ -9,6 +9,6 @@
         public bool? IsCustomAdded { get; set; }
 
         //    Ако Type != null → това е системно удобство(Pool, Gym, Spa).
-        //    Ако Type == null → това е потребителско удобство(например „Йога зала“).
+        //    Ако Type == null → това е потребителско удобство.
     }
 }

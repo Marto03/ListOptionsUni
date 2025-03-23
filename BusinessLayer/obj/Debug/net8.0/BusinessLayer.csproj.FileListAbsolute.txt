@@ -10,9 +10,9 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\Busi
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\Business.EA331CBA.Up2Date
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.pdb
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\ref\BusinessLayer.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json

@@ -9,10 +9,10 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLaye
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.csproj.Up2Date
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.pdb
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json
