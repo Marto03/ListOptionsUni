@@ -11,6 +11,5 @@ namespace BusinessLayer.Services
             _context = context;
         }
 
-        public void SaveChanges() => _context.SaveChanges();
     }
 }

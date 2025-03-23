@@ -7,12 +7,9 @@ using System.Windows.Input;
 public class UserViewModel : BaseViewModel
 {
     private readonly UserService _userService;
-    private string _username;
-    private string _password;
+    private string username;
+    private string password;
     private bool _isConfigViewVisible;
-
-    public ICommand LoginCommand { get; }
-    public ICommand OpenConfigCommand { get; }
 
     public UserViewModel(UserService userService)
     {
@@ -23,18 +20,21 @@ public class UserViewModel : BaseViewModel
         UserDetailsVM = new UserDetailsViewModel(userService);
     }
 
+    public ICommand LoginCommand { get; }
+    public ICommand OpenConfigCommand { get; }
+
     public UserDetailsViewModel UserDetailsVM { get; }
 
     public string Username
     {
-        get => _username;
-        set { _username = value; OnPropertyChanged(nameof(Username)); }
+        get => username;
+        set { username = value; OnPropertyChanged(nameof(Username)); }
     }
 
     public string Password
     {
-        get => _password;
-        set { _password = value; OnPropertyChanged(nameof(Password)); }
+        get => password;
+        set { password = value; OnPropertyChanged(nameof(Password)); }
     }
 
     public bool IsConfigViewVisible
@@ -51,8 +51,8 @@ public class UserViewModel : BaseViewModel
         var user = await _userService.AuthenticateAsync(Username, Password);
         if (user != null)
         {
+            OnSuccessLogion();
             OnPropertyChanged(nameof(CurrentUser));
-
         }
         else
         {
@@ -61,6 +61,13 @@ public class UserViewModel : BaseViewModel
         }
     }
 
+    private void OnSuccessLogion()
+    {
+        username = null;
+        password = null;
+        OnPropertyChanged(nameof(Username));
+        OnPropertyChanged(nameof(Password));
+    }
     private void OpenConfig(object o)
     {
         IsConfigViewVisible = true;

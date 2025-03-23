@@ -66,15 +66,6 @@ namespace DataLayer.Models
                 }
             );
         }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    // Смесени списъци: първоначално добавяме стандартни стойности за PaymentMethods
-        //    modelBuilder.Entity<PaymentMethodModel>().HasData(
-        //        new PaymentMethodModel { Id = 1, Type = PaymentMethodTypeEnum.CreditCard, IsSystemDefined = true },
-        //        new PaymentMethodModel { Id = 2, Type = PaymentMethodTypeEnum.PayPal, IsSystemDefined = true },
-        //        new PaymentMethodModel { Id = 3, Type = PaymentMethodTypeEnum.BankTransfer, IsSystemDefined = true }
-        //    );
-        //}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

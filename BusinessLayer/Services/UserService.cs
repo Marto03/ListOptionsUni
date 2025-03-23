@@ -74,8 +74,8 @@ namespace BusinessLayer.Services
 
         public async Task<bool> RegisterUserAsync(UserModel userModel)
         {
-            if (await _context.Users.AnyAsync(u => u.UserName == userModel.UserName))
-                return false; // Вече съществува
+            if (await _context.Users.AnyAsync(u => u.Id == userModel.Id))
+                return await UpdateUserAsync(userModel); // Вече съществува
 
             string hashedPassword = UserModel.HashPassword(userModel.Password);
 
@@ -104,7 +104,7 @@ namespace BusinessLayer.Services
             existingUser.Type = updatedUser.Type;
 
             // Проверка дали паролата е променена
-            if (!string.IsNullOrWhiteSpace(updatedUser.Password) && updatedUser.Password != existingUser.Password)
+            if (!string.IsNullOrWhiteSpace(updatedUser.Password) && UserModel.HashPassword(updatedUser.Password) != existingUser.Password)
             {
                 existingUser.Password = UserModel.HashPassword(updatedUser.Password);
             }

@@ -18,16 +18,16 @@ namespace DataLayer.Services
 
         public void AddFacility(string name)
         {
-            if (_context.Facilities.Any(f => f.Name == name || f.Type.ToString() == name))
+            if (_context.Facilities.Any(f => f.Name.ToLower() == name.ToLower()))
             {
                 throw new InvalidOperationException("Facility already exists.");
             }
-            if (Enum.TryParse(name, true, out FacilityTypeEnum type))
-            {
-                // Ако името съвпада с енум стойност, създаваме FacilityModel
-                var amenity = new FacilityModel { Type = type, Name = type.ToString() };
-                _context.Add(amenity);
-            }
+            //if (Enum.TryParse(name, true, out FacilityTypeEnum type))
+            //{
+            //    // Ако името съвпада с енум стойност, създаваме FacilityModel
+            //    var amenity = new FacilityModel { Type = type, Name = type.ToString() };
+            //    _context.Add(amenity);
+            //}
             else
             {
                 // Ако името не съвпада с енум стойност, го запазваме като потребителско добавено (Name)

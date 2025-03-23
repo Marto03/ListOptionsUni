@@ -2,6 +2,7 @@
 using DataLayer.Services;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -15,7 +16,8 @@ namespace ListsOptionsUI.ViewModels
         {
             _facilityService = facilityService;
             Facilities = new ObservableCollection<FacilityModel>(_facilityService.GetAllFacilities());
-            AddFacilityCommand = new RelayCommand(AddFacility);
+            AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
+
         }
 
         public ObservableCollection<FacilityModel> Facilities { get; set; }
@@ -36,9 +38,16 @@ namespace ListsOptionsUI.ViewModels
         {
             if (!string.IsNullOrWhiteSpace(NewFacilityName))
             {
-                _facilityService.AddFacility(NewFacilityName);
-                Facilities.Add(new FacilityModel { Name = NewFacilityName , IsCustomAdded = true});
-                NewFacilityName = "";
+                try
+                {
+                    _facilityService.AddFacility(NewFacilityName);
+                    Facilities.Add(new FacilityModel { Name = NewFacilityName, IsCustomAdded = true });
+                    NewFacilityName = "";
+                }
+                catch (InvalidOperationException)
+                {
+                    MessageBox.Show("Хотелското удобство вече съществува!", "Невалидно удобство", MessageBoxButton.OK);
+                }
                 //roomTypeService.SaveChanges();
             }
         }
