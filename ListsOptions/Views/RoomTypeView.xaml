@@ -11,7 +11,7 @@
             <ListBox ItemsSource="{Binding RoomTypes}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Name}s" />
+                        <TextBlock Text="{Binding Name}" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
