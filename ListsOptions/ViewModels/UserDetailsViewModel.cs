@@ -1,74 +1,82 @@
 ﻿using BusinessLayer.Services;
+using Common.CustomExceptions;
 using DataLayer.Models;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
 {
     public class UserDetailsViewModel : BaseViewModel
     {
-        private readonly UserService _userService;
-        private UserModel _selectedUser;
-        private UserModel _newUser;
-        private bool _isExpanderOpen;
-
+        #region fields
+        private readonly UserService userService;
+        private UserModel selectedUser;
+        private UserModel newUser;
+        private bool isExpanderOpen;
+        private bool isConfiguringExistingUser;
+        private bool CanSaveUser => !string.IsNullOrWhiteSpace(NewUser.UserName) &&
+                                    !string.IsNullOrWhiteSpace(NewUser.Password) && 
+                                    CurrentUser?.Type == UserTypeEnum.Admin;
+        #endregion
+        #region Constructor
         public UserDetailsViewModel(UserService userService)
         {
-            _userService = userService;
+            this.userService = userService;
             UserTypes = new ObservableCollection<UserTypeEnum>((UserTypeEnum[])Enum.GetValues(typeof(UserTypeEnum)));
 
             AddUserCommand = new RelayCommand((o) => OpenExpander());
             SaveNewUserCommand = new RelayCommand(async _ => await SaveUserAsync(), _ => CanSaveUser);
-            DeleteUserCommand = new RelayCommand(async user => await DeleteUserAsync(user), user => user is UserModel && SelectedUser != null && CurrentUser?.Type == UserTypeEnum.Admin);
-            ConfigureUserCommand = new RelayCommand(async user => await ConfigureUser(user), user => user is UserModel && SelectedUser != null && CurrentUser?.Type == UserTypeEnum.Admin);
+            DeleteUserCommand = new RelayCommand(async user => await DeleteUserAsync(user),user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
 
+            ConfigureUserCommand = new RelayCommand(async user => await ConfigureUser(user),user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
             NewUser = new UserModel();
             LoadUsersAsync();
         }
-
+        #endregion
+        #region Properties
         public ObservableCollection<UserModel> Users { get; set; } = new();
         public ObservableCollection<UserTypeEnum> UserTypes { get; }
-
+        public ICommand AddUserCommand { get; }
+        public ICommand SaveNewUserCommand { get; }
+        public ICommand DeleteUserCommand { get; }
+        public ICommand ConfigureUserCommand { get; }
         public UserModel SelectedUser
         {
-            get => _selectedUser;
+            get => selectedUser;
             set
             {
-                _selectedUser = value;
+                selectedUser = value;
                 OnPropertyChanged(nameof(SelectedUser));
             }
         }
 
         public UserModel NewUser
         {
-            get => _newUser;
+            get => newUser;
             set
             {
-                _newUser = value;
+                newUser = value;
                 OnPropertyChanged(nameof(NewUser));
             }
         }
 
         public bool IsExpanderOpen
         {
-            get => _isExpanderOpen;
+            get => isExpanderOpen;
             set
             {
-                _isExpanderOpen = value;
+                isExpanderOpen = value;
                 OnPropertyChanged(nameof(IsExpanderOpen));
             }
         }
-
-        public ICommand AddUserCommand { get; }
-        public ICommand SaveNewUserCommand { get; }
-        public ICommand DeleteUserCommand { get; }
-        public ICommand ConfigureUserCommand { get; }
-
+        #endregion
+        #region Methods
         private async Task LoadUsersAsync()
         {
             Users.Clear();
-            var users = await _userService.GetAllUsersAsync();
+            var users = await userService.GetAllUsersAsync();
             foreach (var user in users)
                 Users.Add(user);
         }
@@ -79,28 +87,33 @@ namespace ListsOptionsUI.ViewModels
             NewUser.Password = null;
             NewUser.Type = UserTypeEnum.Admin;
             OnPropertyChanged(nameof(NewUser));
+            OnPropertyChanged(nameof(NewUser.UserName));
+            OnPropertyChanged(nameof(NewUser.Password));
             IsExpanderOpen = true;
+            isConfiguringExistingUser = false;
             //OnPropertyChanged(nameof(IsExpanderOpen));
         }
 
-        private bool CanSaveUser => !string.IsNullOrWhiteSpace(NewUser.UserName) &&
-                                    !string.IsNullOrWhiteSpace(NewUser.Password) && CurrentUser?.Type == UserTypeEnum.Admin;
 
         private async Task SaveUserAsync()
         {
             if (!CanSaveUser) return;
 
-            bool success = await _userService.RegisterUserAsync(NewUser);
-            if (success)
+            try
             {
-                //NewUser = new UserModel();
+                await userService.ManageUserAsync(NewUser, isConfiguringExistingUser);
+
                 await LoadUsersAsync();
                 IsExpanderOpen = false;
                 NewUser = new UserModel();
             }
-            else
+            catch (UserAlreadyExistsException e)
             {
-                // TODO: Покажи съобщение за грешка
+                MessageBox.Show(e.Message, "Невалиден потребител", MessageBoxButton.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Грешка: {ex.Message}", "Възникна неочаквана грешка", MessageBoxButton.OK);
             }
         }
 
@@ -112,20 +125,10 @@ namespace ListsOptionsUI.ViewModels
             // Задаваме избрания потребител от параметъра
             SelectedUser = user;
 
-            bool success = await _userService.DeleteUserAsync(SelectedUser);
+            bool success = await userService.DeleteUserAsync(SelectedUser);
             if (success)
                 await LoadUsersAsync();
         }
-
-        //private async Task ConfigureUser()
-        //{
-        //    if(!IsExpanderOpen) IsExpanderOpen = true;
-        //    bool success = await _userService.UpdateUserAsync(SelectedUser);
-        //    if (success)
-        //        await LoadUsersAsync();
-
-        //    // TODO: Логика за отваряне на конфигурацията на избран потребител
-        //}
 
         private async Task ConfigureUser(object parameter)
         {
@@ -135,7 +138,7 @@ namespace ListsOptionsUI.ViewModels
 
             // Задаваме избрания потребител от параметъра
             SelectedUser = user;
-
+            isConfiguringExistingUser = true;
             // Копираме данните на избрания потребител в NewUser, за да може да ги редактираме
             NewUser = new UserModel
             {
@@ -147,6 +150,7 @@ namespace ListsOptionsUI.ViewModels
             // Отваряме Expander-а за редакция
             IsExpanderOpen = true;
         }
+        #endregion
     }
 
 }

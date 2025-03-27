@@ -9,16 +9,20 @@ namespace ListsOptionsUI.ViewModels
 {
     public class PaymentMethodViewModel : BaseViewModel
     {
+        #region fields
         private readonly PaymentMethodService paymentMethodService;
         private string newPaymentMethod;
-
+        #endregion
+        #region Constructor
         public PaymentMethodViewModel(PaymentMethodService paymentMethodService)
         {
             this.paymentMethodService = paymentMethodService;
             PaymentMethods = new ObservableCollection<PaymentMethodModel>(this.paymentMethodService.GetPaymentMethods());
             AddPaymentMethodCommand = new RelayCommand(AddPaymentMethod);
         }
-
+        #endregion
+        #region Properties
+        public ICommand AddPaymentMethodCommand { get; }
         public ObservableCollection<PaymentMethodModel> PaymentMethods { get; set; }
         public string NewPaymentMethod
         {
@@ -30,12 +34,11 @@ namespace ListsOptionsUI.ViewModels
             }
         }
 
-        public ICommand AddPaymentMethodCommand { get; }
-
-
+        #endregion
+        #region Methods
         private void AddPaymentMethod(object o)
         {
-            if (!string.IsNullOrWhiteSpace(NewPaymentMethod) && !PaymentMethods.Any(p=>p.Name.ToLower().Contains(NewPaymentMethod.ToLower())))
+            if (!string.IsNullOrWhiteSpace(NewPaymentMethod))
             {
                 try
                 {
@@ -51,5 +54,6 @@ namespace ListsOptionsUI.ViewModels
                 //roomTypeService.SaveChanges();
             }
         }
+        #endregion
     }
 }

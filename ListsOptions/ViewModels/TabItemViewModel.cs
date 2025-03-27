@@ -10,17 +10,22 @@ namespace ListsOptionsUI.ViewModels
 {
     public class TabItemViewModel : BaseViewModel
     {
-        private bool _isActive;
-        private readonly Action<TabItemViewModel> _closeAction;
+        #region fields
+        private bool isActive;
+        private readonly Action<TabItemViewModel> closeAction;
+        #endregion
+        #region Constructor
         public TabItemViewModel(string title, object view, Action<TabItemViewModel> closeAction, Action<TabItemViewModel> selectAction)
         {
             Title = title;
             View = view;
-            _closeAction = closeAction;
+            this.closeAction = closeAction;
             IsActive = true;
-            CloseCommand = new RelayCommand(o => _closeAction(this));
+            CloseCommand = new RelayCommand(o => this.closeAction(this));
             SelectTabCommand = new RelayCommand(o => selectAction(this)); // Свързване с командата
         }
+        #endregion
+        #region Properties
         public string Title { get; }
         public object View { get; }
         public ICommand CloseCommand { get; }
@@ -29,16 +34,16 @@ namespace ListsOptionsUI.ViewModels
 
         public bool IsActive
         {
-            get => _isActive;
+            get => isActive;
             set
             {
-                if (_isActive != value)
+                if (isActive != value)
                 {
-                    _isActive = value;
+                    isActive = value;
                     OnPropertyChanged(nameof(IsActive));
                 }
             }
         }
-
+        #endregion
     }
 }

@@ -1,13 +1,6 @@
 ﻿using ListsOptionsUI.Commands;
 using ListsOptionsUI.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -15,6 +8,24 @@ namespace ListsOptionsUI.ViewModels
 
     public class MainViewModel : BaseViewModel
     {
+        #region fields
+        private UserViewModel userViewModel;
+        #endregion
+        #region Constructor
+        public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
+        {
+            OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel)));
+            
+            // Ако искам да бъде нова инстанция 
+            //OpenFacilityCommand = new RelayCommand(o => OpenTab("Facility", new FacilityView(new FacilityViewModel(facilityViewModel.facilityService))));
+            
+            OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel)));
+            OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
+            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
+            this.userViewModel = userViewModel;
+        }
+        #endregion
+        #region Properties
         public ObservableCollection<TabItemViewModel> OpenTabs { get; set; } = new();
         public object SelectedView { get; set; }
 
@@ -23,20 +34,6 @@ namespace ListsOptionsUI.ViewModels
         public ICommand OpenRoomTypeCommand { get; }
         public ICommand OpenUserConfigurationCommand { get; }
 
-        private UserViewModel userViewModel;
-
-        public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
-        {
-            OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel)));
-            
-            // Ако искам да бъде нова инстанция 
-            //OpenFacilityCommand = new RelayCommand(o => OpenTab("Facility", new FacilityView(new FacilityViewModel(facilityViewModel._facilityService))));
-            
-            OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel)));
-            OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
-            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
-            this.userViewModel = userViewModel;
-        }
         public UserViewModel UserViewModel
         {
             get
@@ -50,6 +47,8 @@ namespace ListsOptionsUI.ViewModels
                 OnPropertyChanged(nameof(UserViewModel));
             }
         }
+        #endregion
+        #region Methods
         private void OpenTab(string title, object view)
         {
             var existingTab = OpenTabs.FirstOrDefault(t => t.Title == title);
@@ -95,5 +94,6 @@ namespace ListsOptionsUI.ViewModels
 
             OnPropertyChanged(nameof(SelectedView));
         }
+        #endregion
     }
 }

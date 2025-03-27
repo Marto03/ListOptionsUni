@@ -1,4 +1,6 @@
-﻿using DataLayer.Models;
+﻿using Common.CustomExceptions;
+using DataLayer.Models;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer.Services
@@ -12,12 +14,39 @@ namespace BusinessLayer.Services
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<bool> RegisterUserAsync(UserModel userModel)
+        public async Task ManageUserAsync(UserModel userModel, bool isConfiguringExistingUser)
         {
-            if (await _context.Users.AnyAsync(u => u.Id == userModel.Id))
-                return await UpdateUserAsync(userModel); // Вече съществува
+            if (await _context.Users.AnyAsync(u => u.Id == userModel.Id) && isConfiguringExistingUser)
+                await UpdateUserAsync(userModel); // Избран потребител за редакция
+            else
+                await RegisterUserAsync(userModel);
+        }
 
+        public async Task<UserModel?> AuthenticateAsync(string username, string password)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+            if (user == null || UserModel.HashPassword(password) != user.Password)
+                return null; // Невалидно име или парола
+
+            UserSessionService.Instance.SetCurrentUser(user); // Запазване на активния потребител
+            return user;
+        }
+
+        public async Task<bool> DeleteUserAsync(UserModel user)
+        {
+            if (user == null || !_context.Users.Any(u => u.Id == user.Id))
+                return false;
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        private async Task RegisterUserAsync(UserModel userModel)
+        {
             string hashedPassword = UserModel.HashPassword(userModel.Password);
+            if (_context.Users.Any(r => r.UserName == userModel.UserName))
+                throw new UserAlreadyExistsException(userModel.UserName);
 
             var user = new UserModel
             {
@@ -25,19 +54,21 @@ namespace BusinessLayer.Services
                 Password = hashedPassword,
                 Type = userModel.Type
             };
+            //if (await _context.Users.AnyAsync(u => u.UserName == userModel.UserName))
+            //    throw new UserAlreadyExistsException(userModel.UserName);
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-            return true;
+
         }
-        public async Task<bool> UpdateUserAsync(UserModel updatedUser)
+        private async Task UpdateUserAsync(UserModel updatedUser)
         {
             if (updatedUser == null)
-                return false;
+                return;
 
             var existingUser = await _context.Users.FindAsync(updatedUser.Id);
             if (existingUser == null)
-                return false;
+                return;
 
             // Актуализиране на полетата
             existingUser.UserName = updatedUser.UserName;
@@ -52,31 +83,10 @@ namespace BusinessLayer.Services
             try
             {
                 await _context.SaveChangesAsync();
-                return true;
             }
             catch (Exception)
             {
-                return false;
             }
-        }
-        public async Task<UserModel?> AuthenticateAsync(string username, string password)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
-            if (user == null || UserModel.HashPassword(password) != user.Password)
-                return null; // Невалидно име или парола
-
-            UserSessionService.Instance.SetCurrentUser(user); // Запазване на активния потребител
-            return user;
-        }
-
-        public async Task<bool> DeleteUserAsync(UserModel user)
-        {
-            if (user == null)
-                return false;
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return true;
         }
     }
 }

@@ -9,38 +9,40 @@ namespace ListsOptionsUI.ViewModels
 {
     public class FacilityViewModel : BaseViewModel
     {
-        private readonly FacilityService _facilityService;
-        private string _newFacilityName;
-        
+        #region fields
+        private readonly FacilityService facilityService;
+        private string newFacilityName;
+        #endregion
+        #region Constructor
         public FacilityViewModel(FacilityService facilityService)
         {
-            _facilityService = facilityService;
-            Facilities = new ObservableCollection<FacilityModel>(_facilityService.GetAllFacilities());
+            this.facilityService = facilityService;
+            Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
 
         }
-
+        #endregion
+        #region Properties
         public ObservableCollection<FacilityModel> Facilities { get; set; }
+        public ICommand AddFacilityCommand { get; }
         public string NewFacilityName
         {
-            get => _newFacilityName;
+            get => newFacilityName;
             set
             {
-                _newFacilityName = value;
+                newFacilityName = value;
                 OnPropertyChanged(nameof(NewFacilityName));
             }
         }
-
-        public ICommand AddFacilityCommand { get; }
-
-
+        #endregion
+        #region Methods
         private void AddFacility(object o)
         {
             if (!string.IsNullOrWhiteSpace(NewFacilityName))
             {
                 try
                 {
-                    _facilityService.AddFacility(NewFacilityName);
+                    facilityService.AddFacility(NewFacilityName);
                     Facilities.Add(new FacilityModel { Name = NewFacilityName, IsCustomAdded = true });
                     NewFacilityName = "";
                 }
@@ -51,5 +53,6 @@ namespace ListsOptionsUI.ViewModels
                 //roomTypeService.SaveChanges();
             }
         }
+        #endregion
     }
 }

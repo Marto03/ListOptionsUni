@@ -49,7 +49,7 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Command="{Binding OpenFacilityCommand}"
-                        Content="Facility"
+                        Content="Хотелски удобства"
                         FontSize="14"
                         Foreground="White" />
                     <Button
@@ -57,7 +57,7 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Command="{Binding OpenPaymentMethodCommand}"
-                        Content="Payment Methods"
+                        Content="Методи за плащане"
                         FontSize="14"
                         Foreground="White" />
                     <Button
@@ -65,7 +65,7 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Command="{Binding OpenRoomTypeCommand}"
-                        Content="Room Types"
+                        Content="Типове стаи"
                         FontSize="14"
                         Foreground="White" />
                 </StackPanel>
@@ -88,34 +88,6 @@
             Padding="15"
             Background="White"
             CornerRadius="10">
-            <!--<StackPanel>
-                <TextBlock Text="{Binding UserViewModel.CurrentUser}" />
-                <TextBlock
-                    FontSize="20"
-                    FontWeight="Bold"
-                    Foreground="#333"
-                    Text="Вход" />
-                <TextBlock Margin="0,10,0,0" Text="Потребител:" />
-                <TextBox Margin="0,5,0,0" Text="{Binding UserViewModel.Username, UpdateSourceTrigger=PropertyChanged}" />
-                <TextBlock Margin="0,10,0,0" Text="Парола:" />
-                <PasswordBox
-                    Margin="0,5,0,10"
-                    helpers:PasswordBoxHelper.BindPassword="True"
-                    helpers:PasswordBoxHelper.BoundPassword="{Binding UserViewModel.Password, Mode=TwoWay}" />
-
-                <Button
-                    Width="100"
-                    Background="#0078D7"
-                    Command="{Binding UserViewModel.LoginCommand}"
-                    Content="Вход"
-                    Foreground="White" />
-                <Button
-                    Margin="5"
-                    Background="#0078D7"
-                    Command="{Binding OpenUserConfigurationCommand}"
-                    Content="Конфигурация на потребители"
-                    Foreground="White" />
-            </StackPanel>-->
             <local:UserView DataContext="{Binding UserViewModel}" />
         </Border>
 
@@ -146,14 +118,12 @@
                                 <Grid>
                                     <!--  Това ще направи така, че цялата зона да е кликваема  -->
                                     <Button
-                                        HorizontalAlignment="Stretch"
-                                        VerticalAlignment="Stretch"
                                         Background="Transparent"
                                         BorderBrush="Transparent"
                                         Command="{Binding SelectTabCommand}">
                                         <Grid>
                                             <TextBlock
-                                                Margin="5"
+                                                Margin="5,0,15,0"
                                                 VerticalAlignment="Center"
                                                 Text="{Binding Title}" />
                                         </Grid>
@@ -161,7 +131,7 @@
 
                                     <!--  Бутонът за затваряне, който остава вдясно  -->
                                     <Button
-                                        Padding="5"
+                                        Padding="0,5"
                                         HorizontalAlignment="Right"
                                         VerticalAlignment="Center"
                                         Background="Transparent"
@@ -175,45 +145,6 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-
-                <!--<ItemsControl ItemsSource="{Binding OpenTabs}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
-                                <Border
-                                    Width="150"
-                                    Margin="0,0,10,0"
-                                    Padding="10"
-                                    Background="{Binding IsActive, Converter={StaticResource BooleanToActiveTabColorConverter}}"
-                                    CornerRadius="15">
-                                    <TextBlock
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        FontWeight="SemiBold"
-                                        Foreground="White"
-                                        Text="{Binding Title}" />
-                                    <Border.InputBindings>
-                                        <MouseBinding Command="{Binding SelectTabCommand}" Gesture="LeftClick" />
-                                    </Border.InputBindings>
-                                </Border>
-
-                -->
-                <!--  Бутона за затваряне на таба  -->
-                <!--
-                                <Button
-                                    Width="25"
-                                    Height="25"
-                                    Margin="5,0,0,0"
-                                    Background="Transparent"
-                                    BorderBrush="Transparent"
-                                    Command="{Binding CloseCommand}"
-                                    Content="✖"
-                                    FontSize="14"
-                                    Foreground="Red" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>-->
             </StackPanel>
         </Border>
 

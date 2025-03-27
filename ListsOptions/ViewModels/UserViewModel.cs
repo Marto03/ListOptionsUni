@@ -6,20 +6,20 @@ using System.Windows.Input;
 
 public class UserViewModel : BaseViewModel
 {
-    private readonly UserService _userService;
+    #region fields
+    private readonly UserService userService;
     private string username;
     private string password;
-    private bool _isConfigViewVisible;
-
+    #endregion
+    #region Constructor
     public UserViewModel(UserService userService)
     {
-        _userService = userService;
-        LoginCommand = new RelayCommand(async _ => await ExecuteLogin());
-        OpenConfigCommand = new RelayCommand(OpenConfig);
-
+        this.userService = userService;
         UserDetailsVM = new UserDetailsViewModel(userService);
+        LoginCommand = new RelayCommand(async _ => await ExecuteLogin());
     }
-
+    #endregion
+    #region Properties
     public ICommand LoginCommand { get; }
     public ICommand OpenConfigCommand { get; }
 
@@ -36,29 +36,21 @@ public class UserViewModel : BaseViewModel
         get => password;
         set { password = value; OnPropertyChanged(nameof(Password)); }
     }
-
-    public bool IsConfigViewVisible
-    {
-        get => _isConfigViewVisible;
-        set { _isConfigViewVisible = value; OnPropertyChanged(nameof(IsConfigViewVisible)); }
-    }
-
+    #endregion
+    #region Methods
     private async Task ExecuteLogin()
     {
         if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             return;
 
-        var user = await _userService.AuthenticateAsync(Username, Password);
+        var user = await userService.AuthenticateAsync(Username, Password);
         if (user != null)
         {
             OnSuccessLogion();
             OnPropertyChanged(nameof(CurrentUser));
         }
         else
-        {
             MessageBox.Show("Грешно име или парола!", "Невалиден потребител", MessageBoxButton.OK);
-            // TODO: Покажи грешка
-        }
     }
 
     private void OnSuccessLogion()
@@ -68,9 +60,6 @@ public class UserViewModel : BaseViewModel
         OnPropertyChanged(nameof(Username));
         OnPropertyChanged(nameof(Password));
     }
-    private void OpenConfig(object o)
-    {
-        IsConfigViewVisible = true;
-    }
+    #endregion
 }
 
