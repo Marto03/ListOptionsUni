@@ -17,7 +17,7 @@
                 FontWeight="Bold"
                 Text="{Binding CurrentUser.UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <TextBlock.ToolTip>
-                    <ToolTip Content="Това е активният потребител." />
+                    <ToolTip Content="Активен потребител" />
                 </TextBlock.ToolTip>
             </TextBlock>
             <TextBlock

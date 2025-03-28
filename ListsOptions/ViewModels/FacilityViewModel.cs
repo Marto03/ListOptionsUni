@@ -19,12 +19,13 @@ namespace ListsOptionsUI.ViewModels
             this.facilityService = facilityService;
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
-
+            DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => CurrentUser?.Type == UserTypeEnum.Admin);
         }
         #endregion
         #region Properties
         public ObservableCollection<FacilityModel> Facilities { get; set; }
         public ICommand AddFacilityCommand { get; }
+        public ICommand DeleteFacilityCommand { get; }
         public string NewFacilityName
         {
             get => newFacilityName;
@@ -50,7 +51,16 @@ namespace ListsOptionsUI.ViewModels
                 {
                     MessageBox.Show("Хотелското удобство вече съществува!", "Невалидно удобство", MessageBoxButton.OK);
                 }
-                //roomTypeService.SaveChanges();
+            }
+        }
+
+        private void DeleteFacility(object parameter)
+        {
+            if (parameter is FacilityModel facility)
+            {
+                Facilities.Remove(facility);
+                //Optionally, you can also remove it from the service/database
+                facilityService.RemoveFacility(facility);
             }
         }
         #endregion

@@ -18,7 +18,47 @@
             <ListBox ItemsSource="{Binding Facilities}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Name}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Border
+                                x:Name="SwipeContent"
+                                Grid.Column="0"
+                                Background="White">
+                                <TextBlock
+                                    Margin="10,0"
+                                    VerticalAlignment="Center"
+                                    Text="{Binding Name}" />
+                            </Border>
+                            <Button
+                                x:Name="DeleteButton"
+                                Grid.Column="1"
+                                Width="100"
+                                Background="Red"
+                                Command="{Binding DataContext.DeleteFacilityCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
+                                CommandParameter="{Binding}"
+                                Content="Delete"
+                                Foreground="White"
+                                Visibility="Collapsed" />
+                        </Grid>
+                        <DataTemplate.Triggers>
+                            <EventTrigger RoutedEvent="UIElement.MouseMove">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="SwipeContent"
+                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                                            To="-100"
+                                            Duration="0:0:0.3" />
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DeleteButton" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}" />
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </DataTemplate.Triggers>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>

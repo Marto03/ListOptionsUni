@@ -15,7 +15,14 @@ namespace ListsOptionsUI.ViewModels
         public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
         {
             OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel)));
-            
+
+            //OpenFacilityCommand = new RelayCommand(o =>
+            //{
+            //    var facilityView = new FacilityView();
+            //    facilityView.DataContext = facilityViewModel;  // Задаваме DataContext тук
+            //    OpenTab("Хотелски удобства", facilityView);
+            //});
+
             // Ако искам да бъде нова инстанция 
             //OpenFacilityCommand = new RelayCommand(o => OpenTab("Facility", new FacilityView(new FacilityViewModel(facilityViewModel.facilityService))));
             

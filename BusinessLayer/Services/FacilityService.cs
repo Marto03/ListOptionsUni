@@ -38,5 +38,10 @@ namespace DataLayer.Services
             //_context.Add(amenity);
             _context.SaveChanges();
         }
+        public void RemoveFacility(FacilityModel facility)
+        {
+            _context.Remove(facility);
+            _context.SaveChanges();
+        }
     }
 }
