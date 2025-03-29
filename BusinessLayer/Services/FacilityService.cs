@@ -16,7 +16,7 @@ namespace DataLayer.Services
             return _context.Facilities.ToList();  // Извлича всички удобства от базата
         }
 
-        public void AddFacility(string name)
+        public FacilityModel AddFacility(string name)
         {
             if (_context.Facilities.Any(f => f.Name.ToLower() == name.ToLower()))
             {
@@ -25,23 +25,29 @@ namespace DataLayer.Services
             //if (Enum.TryParse(name, true, out FacilityTypeEnum type))
             //{
             //    // Ако името съвпада с енум стойност, създаваме FacilityModel
-            //    var amenity = new FacilityModel { Type = type, Name = type.ToString() };
-            //    _context.Add(amenity);
+            //    var facility = new FacilityModel { Type = type, Name = type.ToString() };
+            //    _context.Add(facility);
             //}
             else
             {
                 // Ако името не съвпада с енум стойност, го запазваме като потребителско добавено (Name)
-                var amenity = new FacilityModel { Name = name, IsCustomAdded = true };
-                _context.Add(amenity);
+                var facility = new FacilityModel { Name = name, IsCustomAdded = true };
+                _context.Facilities.Add(facility);
             }
-            //var amenity = new FacilityModel { Type = (FacilityTypeEnum)name.ToString() };
-            //_context.Add(amenity);
+            //var facility = new FacilityModel { Type = (FacilityTypeEnum)name.ToString() };
+            //_context.Add(facility);
             _context.SaveChanges();
+            return _context.Facilities.FirstOrDefault(f => f.Name == name);
         }
         public void RemoveFacility(FacilityModel facility)
         {
-            _context.Remove(facility);
-            _context.SaveChanges();
+            var existingFacility = _context.Facilities.Find(facility.Id);
+
+            if (existingFacility != null)
+            {
+                _context.Remove(facility);
+                _context.SaveChanges();
+            }
         }
     }
 }

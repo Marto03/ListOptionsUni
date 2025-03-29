@@ -43,9 +43,13 @@ namespace ListsOptionsUI.ViewModels
             {
                 try
                 {
-                    facilityService.AddFacility(NewFacilityName);
-                    Facilities.Add(new FacilityModel { Name = NewFacilityName, IsCustomAdded = true });
-                    NewFacilityName = "";
+                    var newFacility = facilityService.AddFacility(NewFacilityName); // Взимаме обекта от базата
+                    if (newFacility != null)
+                    {
+                        Facilities.Add(newFacility); // Добавяме реалния обект с валидно Id
+                        NewFacilityName = "";
+                        OnPropertyChanged(nameof(Facilities));
+                    }
                 }
                 catch (InvalidOperationException)
                 {
@@ -58,9 +62,9 @@ namespace ListsOptionsUI.ViewModels
         {
             if (parameter is FacilityModel facility)
             {
-                Facilities.Remove(facility);
-                //Optionally, you can also remove it from the service/database
                 facilityService.RemoveFacility(facility);
+                Facilities.Remove(facility);
+                OnPropertyChanged(nameof(Facilities));
             }
         }
         #endregion

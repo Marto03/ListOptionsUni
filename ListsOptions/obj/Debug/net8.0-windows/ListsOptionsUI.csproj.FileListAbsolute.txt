@@ -23,10 +23,6 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windo
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\ListsOptionsUI.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\ListsOptionsUI.pdb
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\CommonServiceLocator.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -42,10 +38,6 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windo
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\GalaSoft.MvvmLight.Extras.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\GalaSoft.MvvmLight.Platform.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\GalaSoft.MvvmLight.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\System.Windows.Interactivity.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\SQLitePCLRaw.core.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -53,14 +45,6 @@ C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windo
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\System.Text.Json.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\debian-x64\native\libuv.so
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\fedora-x64\native\libuv.so
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\opensuse-x64\native\libuv.so
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\osx\native\libuv.dylib
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\rhel-x64\native\libuv.so
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\win7-arm\native\libuv.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\win7-x64\native\libuv.dll
-C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\win7-x86\native\libuv.dll
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\linux-arm\native\libe_sqlite3.so
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libe_sqlite3.so
