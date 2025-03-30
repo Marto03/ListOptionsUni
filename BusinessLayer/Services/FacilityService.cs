@@ -5,7 +5,7 @@ namespace DataLayer.Services
 {
     public class FacilityService : BaseService
     {
-        public FacilityService(HotelDbContextModel context) : base (context) 
+        public FacilityService(HotelDbContextModel context) : base(context)
         {
             //context.Database.EnsureDeleted();
             context.Database.EnsureCreated();
@@ -19,23 +19,12 @@ namespace DataLayer.Services
         public FacilityModel AddFacility(string name)
         {
             if (_context.Facilities.Any(f => f.Name.ToLower() == name.ToLower()))
-            {
                 throw new InvalidOperationException("Facility already exists.");
-            }
-            //if (Enum.TryParse(name, true, out FacilityTypeEnum type))
-            //{
-            //    // Ако името съвпада с енум стойност, създаваме FacilityModel
-            //    var facility = new FacilityModel { Type = type, Name = type.ToString() };
-            //    _context.Add(facility);
-            //}
-            else
-            {
-                // Ако името не съвпада с енум стойност, го запазваме като потребителско добавено (Name)
-                var facility = new FacilityModel { Name = name, IsCustomAdded = true };
-                _context.Facilities.Add(facility);
-            }
-            //var facility = new FacilityModel { Type = (FacilityTypeEnum)name.ToString() };
-            //_context.Add(facility);
+
+            // Ако името не съвпада с енум стойност, го запазваме като потребителско добавено (Name)
+            var facility = new FacilityModel { Name = name, IsCustomAdded = true };
+            _context.Facilities.Add(facility);
+
             _context.SaveChanges();
             return _context.Facilities.FirstOrDefault(f => f.Name == name);
         }

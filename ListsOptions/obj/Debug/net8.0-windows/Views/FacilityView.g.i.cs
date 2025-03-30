@@ -52,7 +52,7 @@ namespace ListsOptionsUI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ListsOptionsUI;V1.0.0.0;component/views/facilityview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ListsOptionsUI;component/views/facilityview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\FacilityView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

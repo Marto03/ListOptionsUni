@@ -44,18 +44,16 @@ namespace BusinessLayer.Services
 
         private async Task RegisterUserAsync(UserModel userModel)
         {
-            string hashedPassword = UserModel.HashPassword(userModel.Password);
             if (_context.Users.Any(r => r.UserName == userModel.UserName))
                 throw new UserAlreadyExistsException(userModel.UserName);
 
+            string hashedPassword = UserModel.HashPassword(userModel.Password);
             var user = new UserModel
             {
                 UserName = userModel.UserName,
                 Password = hashedPassword,
                 Type = userModel.Type
             };
-            //if (await _context.Users.AnyAsync(u => u.UserName == userModel.UserName))
-            //    throw new UserAlreadyExistsException(userModel.UserName);
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -76,9 +74,7 @@ namespace BusinessLayer.Services
 
             // Проверка дали паролата е променена
             if (!string.IsNullOrWhiteSpace(updatedUser.Password) && UserModel.HashPassword(updatedUser.Password) != existingUser.Password)
-            {
                 existingUser.Password = UserModel.HashPassword(updatedUser.Password);
-            }
 
             try
             {

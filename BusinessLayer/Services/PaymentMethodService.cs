@@ -14,18 +14,10 @@ namespace DataLayer.Services
 
         public void AddPaymentMethod(string name)
         {
-            if (_context.PaymentMethods.Any(p => p.Type.ToString() == name || p.Name == name))
+            if (_context.PaymentMethods.Any(p => p.Type.ToString().ToLower().Trim() == name.ToLower().Trim() || p.Name.ToLower().Trim() == name.ToLower().Trim()))
             {
                 throw new InvalidOperationException("Payment method already exists.");
             }
-            //if (Enum.TryParse(name, true, out PaymentMethodTypeEnum type))
-            //{
-            //    // Ако името съвпада с енум стойност, създаваме FacilityModel
-            //    var amenity = new PaymentMethodModel { Type = type , Name = type.ToString() , IsSystemDefined = true};
-            //    _context.Add(amenity);
-            //}
-            //else
-            //{
 
             // Ако няма такъв начин на плащане , го запазваме като потребителско добавено (Name)
             var amenity = new PaymentMethodModel { Name = name };

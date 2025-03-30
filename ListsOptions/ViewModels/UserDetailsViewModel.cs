@@ -26,9 +26,9 @@ namespace ListsOptionsUI.ViewModels
             this.userService = userService;
             UserTypes = new ObservableCollection<UserTypeEnum>((UserTypeEnum[])Enum.GetValues(typeof(UserTypeEnum)));
 
-            AddUserCommand = new RelayCommand((o) => OpenExpander());
+            AddUserCommand = new RelayCommand((o) => AddNewUser());
             SaveNewUserCommand = new RelayCommand(async _ => await SaveUserAsync(), _ => CanSaveUser);
-            DeleteUserCommand = new RelayCommand(async user => await DeleteUserAsync(user),user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
+            DeleteUserCommand = new RelayCommand(async user => await DeleteUserAsync(user), user => user is UserModel selectedUser && selectedUser.Id != 1 && selectedUser != CurrentUser && CurrentUser?.Type == UserTypeEnum.Admin);
 
             ConfigureUserCommand = new RelayCommand(async user => await ConfigureUser(user),user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
             NewUser = new UserModel();
@@ -81,7 +81,7 @@ namespace ListsOptionsUI.ViewModels
                 Users.Add(user);
         }
 
-        private void OpenExpander()
+        private void AddNewUser()
         {
             NewUser.UserName = null;
             NewUser.Password = null;
@@ -91,7 +91,6 @@ namespace ListsOptionsUI.ViewModels
             OnPropertyChanged(nameof(NewUser.Password));
             IsExpanderOpen = true;
             isConfiguringExistingUser = false;
-            //OnPropertyChanged(nameof(IsExpanderOpen));
         }
 
 
@@ -132,8 +131,6 @@ namespace ListsOptionsUI.ViewModels
 
         private async Task ConfigureUser(object parameter)
         {
-            //if (SelectedUser == null) return;
-
             if (parameter is not UserModel user) return;
 
             // Задаваме избрания потребител от параметъра

@@ -51,7 +51,6 @@ namespace ListsOptionsUI.ViewModels
                     MessageBox.Show("Платежният метод вече съществува!", "Невалиден метод", MessageBoxButton.OK);
                 }
 
-                //roomTypeService.SaveChanges();
             }
         }
         #endregion

@@ -51,37 +51,5 @@
                 Foreground="White" />
         </StackPanel>
 
-        <!--  Падащ панел за управление на потребител  -->
-
-        <!--<Expander
-            Grid.Row="1"
-            FontSize="13"
-            Header="Manage Users"
-            IsExpanded="{Binding IsExpanderExpanded}">
-            <local:UserDetailsView DataContext="{Binding UserDetailsVM}" />
-        </Expander>-->
-
-        <!--<Border
-            Grid.Row="1"
-            Padding="10"
-            Background="LightGray"
-            Visibility="{Binding IsManagePanelVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
-            <StackPanel>
-                <TextBox Text="{Binding Username}" />
-                <TextBlock
-                    Margin="5,3,0,0"
-                    VerticalAlignment="Top"
-                    Foreground="Gray"
-                    IsHitTestVisible="False"
-                    Text="Потребителско име"
-                    Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringToVisibilityConverter}}" />
-                <PasswordBox
-                    Margin="0,5,0,10"
-                    helpers:PasswordBoxHelper.BindPassword="True"
-                    helpers:PasswordBoxHelper.BoundPassword="{Binding Password, Mode=TwoWay}" />
-                <ComboBox ItemsSource="{Binding UserTypes}" SelectedItem="{Binding UserType}" />
-                <Button Command="{Binding SaveUserCommand}" Content="Save" />
-            </StackPanel>
-        </Border>-->
     </Grid>
 </UserControl>

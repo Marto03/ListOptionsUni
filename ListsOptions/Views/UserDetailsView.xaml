@@ -19,37 +19,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" IsEnabled="{Binding IsManagePanelVisible, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=True}">
-
-            <!--  Списък с потребители  -->
-
-
-            <!--<ListView ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="Username" />
-                        <GridViewColumn DisplayMemberBinding="{Binding Type}" Header="Type" />
-                        <GridViewColumn Width="Auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Button
-                                            Command="{Binding DataContext.ConfigureUserCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                            CommandParameter="{Binding}"
-                                            Content="Редактирай"
-                                            IsEnabled="{Binding SelectedUser}" />
-                                        <Button
-                                            Command="{Binding DataContext.DeleteUserCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                            CommandParameter="{Binding}"
-                                            Content="Изтрии" />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                    </GridView>
-                </ListView.View>
-            </ListView>-->
-
+        <StackPanel Grid.Row="0">
 
             <ListView ItemsSource="{Binding Users}" SelectedItem="{Binding SelectedUser}">
                 <ListView.View>
@@ -81,7 +51,7 @@
         <Expander
             Grid.Row="3"
             Margin="10"
-            Header="Добавяне на нов потребител"
+            Header="Конфигуриране на потребител"
             IsExpanded="{Binding IsExpanderOpen}">
             <StackPanel Margin="10" Orientation="Vertical">
                 <TextBox

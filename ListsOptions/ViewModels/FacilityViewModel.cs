@@ -19,7 +19,7 @@ namespace ListsOptionsUI.ViewModels
             this.facilityService = facilityService;
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
-            DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => CurrentUser?.Type == UserTypeEnum.Admin);
+            DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => _ is FacilityModel selectedFacilityModel && selectedFacilityModel?.IsCustomAdded == true && CurrentUser?.Type == UserTypeEnum.Admin);
         }
         #endregion
         #region Properties

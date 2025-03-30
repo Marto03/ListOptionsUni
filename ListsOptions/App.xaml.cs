@@ -36,8 +36,8 @@ public partial class App : Application
         services.AddScoped<UserViewModel>();
         services.AddScoped<UserDetailsViewModel>();
         services.AddScoped<MainViewModel>();
-        services.AddScoped<MainWindow>();
         //services.AddScoped<PaymentMethodViewModel>();
+        services.AddScoped<MainWindow>();
 
         _serviceProvider = services.BuildServiceProvider();
     }
