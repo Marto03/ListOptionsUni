@@ -3,28 +3,108 @@
   "WorkspaceRootPath": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\reservationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\reservationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\hotelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\hotelmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\paymentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\paymentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\ipaymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\paymentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\hoteldbcontextmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\hoteldbcontextmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\ireservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\ireservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\repositories\\ihotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\repositories\\ihotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\facilityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\facilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\facilityviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\facilitymodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\userdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\facilityview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\facilityview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,22 +127,6 @@
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\tabitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\converters\\booleantoactivetabcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\converters\\booleantoactivetabcolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,20 +139,8 @@
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\usersessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\paymentmethodservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{33A4A621-85ED-4B29-A796-3BB3055D6844}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\businesslayer\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,10 +183,6 @@
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\helpers\\passwordboxhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69047C4F-28FE-4B8E-96A4-E10AD188DA7C}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\models\\paymentmethodmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|c:\\users\\marti\\desktop\\uni\\\u043F\u0441\\listsoptions\\listsoptions\\views\\paymentmethodview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E7D3F0EB-24BF-4ECB-A8D5-5C46E585A1EA}|ListsOptions\\ListsOptionsUI.csproj|solutionrelative:listsoptions\\views\\paymentmethodview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -150,11 +198,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "UserSessionService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserSessionService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserSessionService.cs",
@@ -164,6 +212,162 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T17:30:45.417Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:44:41.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\PaymentRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\PaymentRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\PaymentRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\PaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:41:47.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPaymentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IPaymentRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\IPaymentRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IPaymentRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\IPaymentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:41:13.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:36:50.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IReservationRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\IReservationRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IReservationRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\IReservationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:36:20.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\ReservationService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\ReservationService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\ReservationService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:34:07.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HotelRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\HotelRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\HotelRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\HotelRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\HotelRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:22:39.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IHotelRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IHotelRepository.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Repositories\\IHotelRepository.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Repositories\\IHotelRepository.cs",
+              "RelativeToolTip": "DataLayer\\Repositories\\IHotelRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T15:21:55.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HotelService.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\HotelService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\HotelService.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\HotelService.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\HotelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:56:21.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\PaymentModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\PaymentModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:44:44.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservationModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\ReservationModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\ReservationModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\ReservationModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\ReservationModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:37:10.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HotelModel.cs",
+              "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelModel.cs",
+              "RelativeDocumentMoniker": "DataLayer\\Models\\HotelModel.cs",
+              "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelModel.cs",
+              "RelativeToolTip": "DataLayer\\Models\\HotelModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T09:33:11.923Z",
               "EditorCaption": ""
             },
             {
@@ -184,7 +388,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:442232674:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -212,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 32,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Commands\\RelayCommand.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Commands\\RelayCommand.cs",
@@ -225,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\MainWindow.xaml.cs",
@@ -238,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "UserDetailsView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\UserDetailsView.xaml.cs",
@@ -251,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 26,
               "Title": "FacilityView.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\FacilityView.xaml",
@@ -263,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 27,
               "Title": "UserDetailsView.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserDetailsView.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\UserDetailsView.xaml",
@@ -275,20 +479,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 24,
               "Title": "UserDetailsViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
               "RelativeToolTip": "ListsOptions\\ViewModels\\UserDetailsViewModel.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAADwvyQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowGcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T15:58:05.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 40,
               "Title": "BooleanToVisibilityConverter.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Converters\\BooleanToVisibilityConverter.cs",
@@ -300,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "StringToVisibilityConverter.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\StringToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Converters\\StringToVisibilityConverter.cs",
@@ -312,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 44,
               "Title": "PasswordBoxHelper.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Helpers\\PasswordBoxHelper.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Helpers\\PasswordBoxHelper.cs",
@@ -324,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 30,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\UserViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\UserViewModel.cs",
@@ -337,20 +541,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\UserService.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\UserService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAywB4AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T16:56:09.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 35,
               "Title": "BaseService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\BaseService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\BaseService.cs",
@@ -363,33 +567,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\UserModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\UserModel.cs",
               "RelativeToolTip": "DataLayer\\Models\\UserModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T16:40:14.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 22,
               "Title": "FacilityViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\FacilityViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\FacilityViewModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\FacilityViewModel.cs",
               "RelativeToolTip": "ListsOptions\\ViewModels\\FacilityViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBMAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAChAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T14:12:03.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
               "Title": "RoomTypeView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\RoomTypeView.xaml.cs",
@@ -402,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 46,
               "Title": "RoomTypeView.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\RoomTypeView.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\RoomTypeView.xaml",
@@ -413,7 +617,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "RoomTypeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\RoomTypeViewModel.cs",
@@ -425,20 +629,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "TabItemViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\TabItemViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\TabItemViewModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\TabItemViewModel.cs",
               "RelativeToolTip": "ListsOptions\\ViewModels\\TabItemViewModel.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowBMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T16:29:39.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "PaymentMethodViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\PaymentMethodViewModel.cs",
@@ -451,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "PaymentMethodView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\PaymentMethodView.xaml.cs",
@@ -464,7 +668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 45,
               "Title": "PaymentMethodView.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\PaymentMethodView.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\PaymentMethodView.xaml",
@@ -475,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "UserView.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\UserView.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\UserView.xaml",
@@ -487,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 31,
               "Title": "BooleanToActiveTabColorConverter.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Converters\\BooleanToActiveTabColorConverter.cs",
@@ -500,20 +704,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "ListsOptions\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwB4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T06:18:19.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 25,
               "Title": "FacilityView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\Views\\FacilityView.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\Views\\FacilityView.xaml.cs",
@@ -526,20 +730,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml.cs",
               "RelativeDocumentMoniker": "ListsOptions\\App.xaml.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\App.xaml.cs",
               "RelativeToolTip": "ListsOptions\\App.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAswC8AAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T14:18:17.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 33,
               "Title": "BaseViewModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\ViewModels\\BaseViewModel.cs",
               "RelativeDocumentMoniker": "ListsOptions\\ViewModels\\BaseViewModel.cs",
@@ -552,33 +756,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 17,
               "Title": "PaymentMethodService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentMethodService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\PaymentMethodService.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\PaymentMethodService.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\PaymentMethodService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T13:34:10.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "FacilityService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\FacilityService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\FacilityService.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\FacilityService.cs",
               "RelativeToolTip": "BusinessLayer\\Services\\FacilityService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAcwA8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wA8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T12:03:46.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "RoomTypeService.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\BusinessLayer\\Services\\RoomTypeService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\Services\\RoomTypeService.cs",
@@ -591,45 +795,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 3,
               "Title": "PaymentMethodModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentMethodModel.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\PaymentMethodModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\PaymentMethodModel.cs",
               "RelativeToolTip": "DataLayer\\Models\\PaymentMethodModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T11:24:01.993Z"
+              "WhenOpened": "2025-03-14T11:24:01.993Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "HotelDbContextModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelDbContextModel.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\HotelDbContextModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\HotelDbContextModel.cs",
               "RelativeToolTip": "DataLayer\\Models\\HotelDbContextModel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwA0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T11:23:35.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "FacilityModel.cs",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\FacilityModel.cs",
               "RelativeDocumentMoniker": "DataLayer\\Models\\FacilityModel.cs",
               "ToolTip": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\DataLayer\\Models\\FacilityModel.cs",
               "RelativeToolTip": "DataLayer\\Models\\FacilityModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-14T11:22:46.085Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\marti\\Desktop\\Uni\\\u041F\u0421\\ListsOptions\\ListsOptions\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ListsOptions\\MainWindow.xaml",

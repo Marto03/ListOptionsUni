@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Services;
 using DataLayer.Models;
+using DataLayer.Repositories;
 using DataLayer.Services;
 using ListsOptionsUI.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,16 @@ public partial class App : Application
         services.AddScoped<PaymentMethodService>();
         services.AddScoped<RoomTypeService>();
         services.AddScoped<UserService>();
+
+        // Регистрираме Repository слоя
+        services.AddScoped<IHotelRepository, HotelRepository>();
+        services.AddScoped<IReservationRepository, ReservationRepository>();
+        services.AddScoped<IPaymentRepository, PaymentRepository>();
+
+        // Регистрираме Service слоя
+        services.AddScoped<HotelService>();
+        services.AddScoped<ReservationService>();
+        services.AddScoped<PaymentService>();
 
         // Регистриране на ViewModel-и
         services.AddScoped<FacilityViewModel>();

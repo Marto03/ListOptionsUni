@@ -7,7 +7,9 @@ namespace DataLayer.Models
         public DbSet<FacilityModel> Facilities { get; set; }
         public DbSet<PaymentMethodModel> PaymentMethods { get; set; }
         public DbSet<UserModel> Users { get; set; }
-
+        public DbSet<HotelModel> Hotels { get; set; }
+        public DbSet<ReservationModel> Reservations { get; set; }
+        public DbSet<PaymentModel> Payments { get; set; }
         public HotelDbContextModel(DbContextOptions<HotelDbContextModel> options)
             : base(options)
         {
