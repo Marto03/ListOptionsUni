@@ -15,15 +15,11 @@ public class UserViewModel : BaseViewModel
     public UserViewModel(UserService userService)
     {
         this.userService = userService;
-        UserDetailsVM = new UserDetailsViewModel(userService);
         LoginCommand = new RelayCommand(async _ => await ExecuteLogin());
     }
     #endregion
     #region Properties
     public ICommand LoginCommand { get; }
-    public ICommand OpenConfigCommand { get; }
-
-    public UserDetailsViewModel UserDetailsVM { get; }
 
     public string Username
     {
