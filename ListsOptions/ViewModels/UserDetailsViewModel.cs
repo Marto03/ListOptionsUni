@@ -20,7 +20,7 @@ namespace ListsOptionsUI.ViewModels
         private bool isExpanderOpen;
         private bool isConfiguringExistingUser;
         private bool CanSaveUser => !string.IsNullOrWhiteSpace(NewUser.UserName) &&
-                                    !string.IsNullOrWhiteSpace(NewUser.Password) && 
+                                    !string.IsNullOrWhiteSpace(NewUser.Password) &&
                                     CurrentUser?.Type == UserTypeEnum.Admin;
         #endregion
         #region Constructor
@@ -33,9 +33,12 @@ namespace ListsOptionsUI.ViewModels
             SaveNewUserCommand = new RelayCommand(async _ => await SaveUserAsync(), _ => CanSaveUser);
             DeleteUserCommand = new RelayCommand(async user => await DeleteUserAsync(user), user => user is UserModel selectedUser && selectedUser.Id != 1 && selectedUser != CurrentUser && CurrentUser?.Type == UserTypeEnum.Admin);
 
-            ConfigureUserCommand = new RelayCommand(async user => await ConfigureUser(user),user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
+            ConfigureUserCommand = new RelayCommand(async user => await ConfigureUser(user), user => user is UserModel selectedUser && CurrentUser?.Type == UserTypeEnum.Admin);
             NewUser = new UserModel();
             LoadUsersAsync();
+
+            //UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+            Events.AppEvents.UsersChanged += async () => await LoadUsersAsync();
         }
         #endregion
         #region Properties
@@ -96,15 +99,14 @@ namespace ListsOptionsUI.ViewModels
             isConfiguringExistingUser = false;
         }
 
-
         private async Task SaveUserAsync()
         {
             if (!CanSaveUser) return;
 
             try
             {
-                var paymentService = App.ServiceProvider.GetRequiredService<PaymentService>();
-                var test = App.ServiceProvider.GetRequiredService<HotelService>();
+                //var paymentService = App.ServiceProvider.GetRequiredService<PaymentService>();
+                //var test = App.ServiceProvider.GetRequiredService<HotelService>();
 
                 await userService.ManageUserAsync(NewUser, isConfiguringExistingUser);
 
@@ -124,10 +126,8 @@ namespace ListsOptionsUI.ViewModels
 
         private async Task DeleteUserAsync(object parameter)
         {
-            //if (SelectedUser == null) return;
             if (parameter is not UserModel user) return;
 
-            // Задаваме избрания потребител от параметъра
             SelectedUser = user;
 
             bool success = await userService.DeleteUserAsync(SelectedUser);
@@ -139,10 +139,8 @@ namespace ListsOptionsUI.ViewModels
         {
             if (parameter is not UserModel user) return;
 
-            // Задаваме избрания потребител от параметъра
             SelectedUser = user;
             isConfiguringExistingUser = true;
-            // Копираме данните на избрания потребител в NewUser, за да може да ги редактираме
             NewUser = new UserModel
             {
                 Id = SelectedUser.Id,
@@ -150,9 +148,13 @@ namespace ListsOptionsUI.ViewModels
                 Type = SelectedUser.Type
             };
 
-            // Отваряме Expander-а за редакция
             IsExpanderOpen = true;
         }
+
+        //private void OnCurrentUserChanged(UserModel? user)
+        //{
+        //    OnPropertyChanged(nameof(Users));
+        //}
         #endregion
     }
 

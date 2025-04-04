@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ListsOptionsUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38260e25f49a482e7dfc8c98314c5ac564005e64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3ef8d4fc6dde3f228fc5c2164b46aba7fd4281b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ListsOptionsUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ListsOptionsUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

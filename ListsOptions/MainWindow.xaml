@@ -73,7 +73,7 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Command="{Binding OpenHotelConfigurationCommand}"
-                        Content="Типове стаи"
+                        Content="Конфигурация на хотели"
                         FontSize="14"
                         Foreground="White" />
                 </StackPanel>

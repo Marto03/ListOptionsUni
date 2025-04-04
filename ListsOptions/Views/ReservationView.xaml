@@ -1,0 +1,74 @@
+﻿<UserControl
+    x:Class="ListsOptionsUI.Views.ReservationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:ListsOptionsUI.Helpers"
+    xmlns:local="clr-namespace:ListsOptionsUI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Margin="20">
+        <StackPanel>
+            <ComboBox
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете хотел..."
+                DisplayMemberPath="Name"
+                ItemsSource="{Binding Hotels}"
+                SelectedItem="{Binding SelectedHotel}" />
+
+            <ComboBox
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете хотелско удобство..."
+                DisplayMemberPath="Name"
+                ItemsSource="{Binding Facilities}"
+                SelectedItem="{Binding SelectedFacility}" />
+
+            <ComboBox
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете начин на плащане..."
+                DisplayMemberPath="Name"
+                ItemsSource="{Binding PaymentMethods}"
+                SelectedItem="{Binding SelectedPaymentMethod}" />
+
+            <ComboBox
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете тип на стаята..."
+                ItemsSource="{Binding Source={StaticResource RoomTypeEnumValues}}"
+                SelectedItem="{Binding SelectedRoomType}" />
+
+            <DatePicker
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете дата на настаняване..."
+                SelectedDate="{Binding CheckInDate}" />
+
+            <DatePicker
+                Width="280"
+                Height="35"
+                Padding="5"
+                helpers:PlaceholderHelper.PlaceholderText="Изберете дата на напускане..."
+                SelectedDate="{Binding CheckOutDate}" />
+
+            <Button
+                Width="130"
+                Height="40"
+                Margin="0,10,0,10"
+                Background="#4CAF50"
+                BorderThickness="0"
+                Command="{Binding CreateReservationCommand}"
+                Content="Create Reservation"
+                Cursor="Hand"
+                FontWeight="Bold"
+                Foreground="White" />
+        </StackPanel>
+    </Grid>
+</UserControl>

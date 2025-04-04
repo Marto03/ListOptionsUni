@@ -4,9 +4,6 @@ using ListsOptions;
 using ListsOptionsUI.Commands;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -26,7 +23,6 @@ namespace ListsOptionsUI.ViewModels
             {
                 _selectedHotel = value;
                 OnPropertyChanged(nameof(SelectedHotel));
-                //UpdateHotelSelection(value);
             }
         }
         public string NewHotelName
@@ -52,10 +48,13 @@ namespace ListsOptionsUI.ViewModels
             _hotelService = App.ServiceProvider.GetRequiredService<HotelService>();
             _userService = App.ServiceProvider.GetRequiredService<UserService>();
 
-            SaveHotelCommand = new RelayCommand(async _ => await SaveHotelSelectionAsync(), _ => CanSave );
+            SaveHotelCommand = new RelayCommand(async _ => await SaveHotelSelectionAsync(), _ => CanSave);
             AddHotelCommand = new RelayCommand(AddNewHotel);
             SelectHotelCommand = new RelayCommand(SelectHotel);
+
             LoadHotels();
+
+            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
         }
 
         private void LoadHotels()
@@ -67,12 +66,25 @@ namespace ListsOptionsUI.ViewModels
                 Hotels.Add(hotel);
             }
 
+            UpdateSelectedHotel();
+        }
+
+        private void UpdateSelectedHotel()
+        {
             if (CurrentUser?.HotelId is int hotelId)
             {
                 SelectedHotel = Hotels.FirstOrDefault(h => h.Id == hotelId);
             }
+            else
+            {
+                SelectedHotel = null;
+            }
         }
 
+        private void OnCurrentUserChanged(UserModel? user)
+        {
+            UpdateSelectedHotel();
+        }
 
         private void SelectHotel(object o)
         {
@@ -82,14 +94,6 @@ namespace ListsOptionsUI.ViewModels
                 SelectedHotel = hotel; // Променяме само ако е различен
             }
         }
-        //private void UpdateHotelSelection(HotelModel? selected)
-        //{
-        //    // Обновяваме всички хотели, за да направим избран само този, който е в SelectedHotel
-        //    foreach (var hotel in Hotels)
-        //    {
-        //        hotel.IsSelected = hotel == SelectedHotel;
-        //    }
-        //}
 
         private async Task SaveHotelSelectionAsync()
         {
@@ -97,23 +101,21 @@ namespace ListsOptionsUI.ViewModels
             {
                 CurrentUser.HotelId = SelectedHotel.Id;
                 await _userService.UpdateUserHotelAsync(CurrentUser);
+
+                Events.AppEvents.RaiseUsersChanged();
+                //OnPropertyChanged(nameof(App.ServiceProvider.GetRequiredService<UserDetailsViewModel>().Users));
             }
         }
 
         private void AddNewHotel(object o)
         {
-            // Тук можеш да отвориш нов прозорец или изглед за създаване на хотел
-            // Пример: new AddHotelWindow().ShowDialog();
             var newHotel = new HotelModel
             {
-                Name = NewHotelName, // Тук може да добавиш полета за въвеждане от потребителя
-                // Добави и други необходими полета...
+                Name = NewHotelName,
             };
 
-            // Добавяне на новия хотел в базата
-            _hotelService.AddHotel(newHotel);  // Предполага се, че има такава услуга
-            Hotels.Add(newHotel);  // 
+            _hotelService.AddHotel(newHotel);
+            Hotels.Add(newHotel);
         }
-
     }
 }
