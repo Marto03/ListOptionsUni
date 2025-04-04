@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace DataLayer.Models
+﻿namespace DataLayer.Models
 {
     public class PaymentModel
     {
@@ -10,6 +7,7 @@ namespace DataLayer.Models
         public DateTime PaymentDate { get; set; } = DateTime.Now;
 
         public int PaymentMethodId { get; set; }  // FK към метода на плащане
-        public PaymentMethodModel PaymentMethod { get; set; }  // Навигационно свойство
+
+        //public PaymentMethodModel PaymentMethod { get; set; }  // Навигационно свойство
     }
 }

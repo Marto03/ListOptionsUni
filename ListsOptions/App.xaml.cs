@@ -14,8 +14,6 @@ namespace ListsOptions;
 /// </summary>
 public partial class App : Application
 {
-    private readonly ServiceProvider _serviceProvider;
-
     public App()
     {
         ServiceCollection services = new ServiceCollection();
@@ -32,8 +30,8 @@ public partial class App : Application
 
         // Регистрираме Repository слоя
         services.AddScoped<IHotelRepository, HotelRepository>();
-        services.AddScoped<IReservationRepository, ReservationRepository>();
-        services.AddScoped<IPaymentRepository, PaymentRepository>();
+        //services.AddScoped<IReservationRepository, ReservationRepository>();
+        //services.AddScoped<IPaymentRepository, PaymentRepository>();
 
         // Регистрираме Service слоя
         services.AddScoped<HotelService>();
@@ -47,16 +45,19 @@ public partial class App : Application
         services.AddScoped<UserViewModel>();
         services.AddScoped<UserDetailsViewModel>();
         services.AddScoped<MainViewModel>();
+
+        services.AddScoped<HotelConfigurationViewModel>();
         //services.AddScoped<PaymentMethodViewModel>();
         services.AddScoped<MainWindow>();
 
-        _serviceProvider = services.BuildServiceProvider();
+        ServiceProvider = services.BuildServiceProvider();
     }
+    public static IServiceProvider ServiceProvider { get; private set; }
 
     protected override void OnStartup(StartupEventArgs e)
     {
-        var mainWindow = _serviceProvider.GetRequiredService<MainWindow>(); // DI за MainWindow
-        mainWindow.DataContext = _serviceProvider.GetRequiredService<MainViewModel>(); // Свързване на MainViewModel
+        var mainWindow = ServiceProvider.GetRequiredService<MainWindow>(); // DI за MainWindow
+        mainWindow.DataContext = ServiceProvider.GetRequiredService<MainViewModel>(); // Свързване на MainViewModel
         mainWindow.Show();
         base.OnStartup(e);
     }

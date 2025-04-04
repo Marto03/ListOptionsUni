@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.Repositories
 {
-    public class ReservationRepository : IReservationRepository
+    public class ReservationRepository /*: IReservationRepository*/
     {
         private readonly HotelDbContextModel _context;
 
@@ -18,9 +18,9 @@ namespace DataLayer.Repositories
             _context.SaveChanges();
         }
 
-        public List<ReservationModel> GetAllReservations()
-        {
-            return _context.Reservations.Include(r => r.Hotel).Include(r => r.Payment).ToList();
-        }
+        //public List<ReservationModel> GetAllReservations()
+        //{
+        //    return _context.Reservations.Include(r => r.Hotel).Include(r => r.Payment).ToList();
+        //}
     }
 }

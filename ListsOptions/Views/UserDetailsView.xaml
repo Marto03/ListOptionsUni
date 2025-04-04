@@ -26,6 +26,7 @@
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="Потребителско име" />
                         <GridViewColumn DisplayMemberBinding="{Binding Type}" Header="Тип" />
+                        <GridViewColumn DisplayMemberBinding="{Binding HotelId}" Header="Хотел" />
                         <GridViewColumn Width="Auto">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

@@ -12,6 +12,9 @@ namespace DataLayer.Models
 
         public UserTypeEnum Type { get; set; }  // Определя ролята на потребителя
 
+        // НОВО: Хотел към който принадлежи (само за администратор)
+        public int? HotelId { get; set; }
+
         // Метод за хеширане на парола (SHA256)
         public static string HashPassword(string password)
         {

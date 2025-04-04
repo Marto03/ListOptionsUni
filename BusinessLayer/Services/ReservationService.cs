@@ -12,19 +12,19 @@ namespace BusinessLayer.Services
             _reservationRepository = reservationRepository;
         }
 
-        public void AddReservation(ReservationModel reservation)
-        {
-            if (reservation.Payment == null)
-                throw new InvalidOperationException("Резервацията трябва да има плащане!");
+        //public void AddReservation(ReservationModel reservation)
+        //{
+        //    if (reservation.Payment == null)
+        //        throw new InvalidOperationException("Резервацията трябва да има плащане!");
 
-            // Проверка за -10% намаление, ако удобството е басейн или друго несистемно дефинирано удобство
-            if (reservation.UsedFacilities.Any(f => f.Type == FacilityTypeEnum.Pool))
-            {
-                reservation.Price *= 0.9m; // Намаляваме цената с 10%
-            }
+        //    // Проверка за -10% намаление, ако удобството е басейн или друго несистемно дефинирано удобство
+        //    if (reservation.UsedFacilities.Any(f => f.Type == FacilityTypeEnum.Pool))
+        //    {
+        //        reservation.Price *= 0.9m; // Намаляваме цената с 10%
+        //    }
 
-            _reservationRepository.AddReservation(reservation);
-        }
+        //    _reservationRepository.AddReservation(reservation);
+        //}
 
         public List<ReservationModel> GetAllReservations()
         {

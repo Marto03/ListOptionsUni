@@ -12,11 +12,9 @@ namespace DataLayer.Models
         [Required]
         public int HotelId { get; set; }
 
-        [ForeignKey("HotelId")]
-        public HotelModel Hotel { get; set; }
 
         [Required]
-        public UserModel UserId { get; set; }
+        public int UserId { get; set; }
 
         [Required]
         public RoomTypeEnum RoomType { get; set; }
@@ -33,23 +31,6 @@ namespace DataLayer.Models
         public List<FacilityModel> UsedFacilities { get; set; } = new();
 
         public int PaymentId { get; set; }
-        public PaymentModel Payment { get; set; }
-
-
-
-
-        public int PaymentId { get; set; }  // FK към плащането
-        public PaymentModel Payment { get; set; }  // Навигационно свойство
-
-        public int HotelId { get; set; }  // FK към хотела
-        public HotelModel Hotel { get; set; }  // Навигационно свойство
-
-        public int RoomTypeId { get; set; }  // FK към типа стая
-        public RoomTypeModel RoomType { get; set; }  // Навигационно свойство
-
-        public int UserId { get; set; }  // FK към потребителя
-        public UserModel User { get; set; }  // Навигационно свойство
-
 
 
 

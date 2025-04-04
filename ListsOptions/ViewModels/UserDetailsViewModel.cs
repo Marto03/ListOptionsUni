@@ -2,7 +2,9 @@
 using Common;
 using Common.CustomExceptions;
 using DataLayer.Models;
+using ListsOptions;
 using ListsOptionsUI.Commands;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -101,6 +103,9 @@ namespace ListsOptionsUI.ViewModels
 
             try
             {
+                var paymentService = App.ServiceProvider.GetRequiredService<PaymentService>();
+                var test = App.ServiceProvider.GetRequiredService<HotelService>();
+
                 await userService.ManageUserAsync(NewUser, isConfiguringExistingUser);
 
                 await LoadUsersAsync();

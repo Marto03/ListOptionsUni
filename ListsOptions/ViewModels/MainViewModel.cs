@@ -1,5 +1,8 @@
-﻿using ListsOptionsUI.Commands;
+﻿using BusinessLayer.Services;
+using ListsOptions;
+using ListsOptionsUI.Commands;
 using ListsOptionsUI.Views;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -12,7 +15,8 @@ namespace ListsOptionsUI.ViewModels
         private UserViewModel userViewModel;
         #endregion
         #region Constructor
-        public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
+        public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, 
+            RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
         {
             OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel)));
 
@@ -29,6 +33,7 @@ namespace ListsOptionsUI.ViewModels
             OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel)));
             OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
             OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
+            OpenHotelConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на хотели", new HotelConfigurationView(App.ServiceProvider.GetRequiredService<HotelConfigurationViewModel>())));
             this.userViewModel = userViewModel;
         }
         #endregion
@@ -40,6 +45,7 @@ namespace ListsOptionsUI.ViewModels
         public ICommand OpenPaymentMethodCommand { get; }
         public ICommand OpenRoomTypeCommand { get; }
         public ICommand OpenUserConfigurationCommand { get; }
+        public ICommand OpenHotelConfigurationCommand { get; }
 
         public UserViewModel UserViewModel
         {

@@ -84,5 +84,28 @@ namespace BusinessLayer.Services
             {
             }
         }
+        public async Task UpdateUserHotelAsync(UserModel userModel)
+        {
+            if (userModel == null)
+                throw new ArgumentNullException(nameof(userModel));
+
+            var existingUser = await _context.Users.FindAsync(userModel.Id);
+            if (existingUser == null)
+                throw new Exception("Потребителят не беше намерен в базата данни.");
+
+            // Актуализиране на ID на хотела
+            existingUser.HotelId = userModel.HotelId;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                // Може да се обработи или хвърли ново изключение
+                throw new Exception("Неуспешно актуализиране на потребителския хотел.", ex);
+            }
+        }
+
     }
 }

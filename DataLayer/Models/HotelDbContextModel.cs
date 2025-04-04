@@ -44,6 +44,25 @@ namespace DataLayer.Models
                 .Property(p => p.Type)
                 .HasConversion<string>();
 
+            // Връзка с хотела (Добавяне на връзка с таблицата Hotels)
+            modelBuilder.Entity<UserModel>()
+                .HasOne<HotelModel>()
+                .WithMany()
+                .HasForeignKey(u => u.HotelId)
+                .OnDelete(DeleteBehavior.SetNull); // Потребителите могат да нямат свързан хотел
+
+            // Конфигуриране на HotelModel
+            modelBuilder.Entity<HotelModel>()
+                .HasKey(p => p.Id);
+
+            // Конфигуриране на ReservationModel
+            modelBuilder.Entity<ReservationModel>()
+                .HasKey(p => p.Id);
+
+            // Конфигуриране на PaymentModel
+            modelBuilder.Entity<PaymentModel>()
+                .HasKey(p => p.Id);
+
             // Вмъкване на системни платежни методи
             modelBuilder.Entity<PaymentMethodModel>().HasData(
                 new PaymentMethodModel { Id = 1, Name = PaymentMethodTypeEnum.CreditCard.ToString(), Type = PaymentMethodTypeEnum.CreditCard, IsSystemDefined = true },
