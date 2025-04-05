@@ -13,9 +13,24 @@ namespace ListsOptionsUI.ViewModels
         private readonly HotelService _hotelService;
         private readonly UserService _userService;
         private string newHotelName;
+        private HotelModel? _selectedHotel;
+
+        private bool CanSave => CurrentUser?.Type == UserTypeEnum.Admin;
+        public HotelConfigurationViewModel()
+        {
+            _hotelService = App.ServiceProvider.GetRequiredService<HotelService>();
+            _userService = App.ServiceProvider.GetRequiredService<UserService>();
+
+            SaveHotelCommand = new RelayCommand(async _ => await SaveHotelSelectionAsync(), _ => CanSave);
+            AddHotelCommand = new RelayCommand(AddNewHotel , _ => CanSave);
+            SelectHotelCommand = new RelayCommand(SelectHotel);
+
+            LoadHotels();
+
+            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+        }
         public ObservableCollection<HotelModel> Hotels { get; set; } = new();
 
-        private HotelModel? _selectedHotel;
         public HotelModel? SelectedHotel
         {
             get => _selectedHotel;
@@ -41,21 +56,6 @@ namespace ListsOptionsUI.ViewModels
         public ICommand SaveHotelCommand { get; }
         public ICommand AddHotelCommand { get; }
         public ICommand SelectHotelCommand { get; }
-
-        private bool CanSave => CurrentUser?.Type == UserTypeEnum.Admin;
-        public HotelConfigurationViewModel()
-        {
-            _hotelService = App.ServiceProvider.GetRequiredService<HotelService>();
-            _userService = App.ServiceProvider.GetRequiredService<UserService>();
-
-            SaveHotelCommand = new RelayCommand(async _ => await SaveHotelSelectionAsync(), _ => CanSave);
-            AddHotelCommand = new RelayCommand(AddNewHotel);
-            SelectHotelCommand = new RelayCommand(SelectHotel);
-
-            LoadHotels();
-
-            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
-        }
 
         private void LoadHotels()
         {

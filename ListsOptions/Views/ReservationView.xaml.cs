@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using ListsOptionsUI.ViewModels;
+using System.Windows.Controls;
 
 namespace ListsOptionsUI.Views
 {
@@ -7,9 +8,10 @@ namespace ListsOptionsUI.Views
     /// </summary>
     public partial class ReservationView : UserControl
     {
-        public ReservationView()
+        public ReservationView(ReservationViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
         }
     }
 }

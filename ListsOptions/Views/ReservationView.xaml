@@ -8,67 +8,82 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Margin="20">
-        <StackPanel>
-            <ComboBox
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете хотел..."
-                DisplayMemberPath="Name"
-                ItemsSource="{Binding Hotels}"
-                SelectedItem="{Binding SelectedHotel}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <!--  Тип на стаята  -->
+        <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+            <TextBlock
+                Width="100"
+                VerticalAlignment="Center"
+                Text="Тип стая:" />
             <ComboBox
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете хотелско удобство..."
-                DisplayMemberPath="Name"
-                ItemsSource="{Binding Facilities}"
-                SelectedItem="{Binding SelectedFacility}" />
+                Width="200"
+                ItemsSource="{Binding RoomTypes}"
+                SelectedItem="{Binding SelectedRoomType}" />
+        </StackPanel>
 
+        <!--  Дати  -->
+        <StackPanel
+            Grid.Row="1"
+            Margin="0,0,0,10"
+            Orientation="Horizontal">
+            <TextBlock
+                Width="100"
+                VerticalAlignment="Center"
+                Text="От дата:" />
+            <DatePicker Width="150" SelectedDate="{Binding CheckInDate}" />
+            <TextBlock
+                Margin="10,0,0,0"
+                VerticalAlignment="Center"
+                Text="До дата:" />
+            <DatePicker Width="150" SelectedDate="{Binding CheckOutDate}" />
+        </StackPanel>
+
+        <!--  Начин на плащане  -->
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,0,0,10"
+            Orientation="Horizontal">
+            <TextBlock
+                Width="150"
+                VerticalAlignment="Center"
+                Text="Метод на плащане:" />
             <ComboBox
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете начин на плащане..."
+                Width="200"
                 DisplayMemberPath="Name"
                 ItemsSource="{Binding PaymentMethods}"
                 SelectedItem="{Binding SelectedPaymentMethod}" />
+        </StackPanel>
 
-            <ComboBox
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете тип на стаята..."
-                ItemsSource="{Binding Source={StaticResource RoomTypeEnumValues}}"
-                SelectedItem="{Binding SelectedRoomType}" />
+        <!--  Удобства  -->
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <TextBlock FontWeight="Bold" Text="Избери удобства:" />
+            <ListBox
+                Height="150"
+                DisplayMemberPath="Facility.Name"
+                ItemsSource="{Binding AvailableFacilities}"
+                SelectionMode="Multiple" />
+        </StackPanel>
 
-            <DatePicker
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете дата на настаняване..."
-                SelectedDate="{Binding CheckInDate}" />
-
-            <DatePicker
-                Width="280"
-                Height="35"
-                Padding="5"
-                helpers:PlaceholderHelper.PlaceholderText="Изберете дата на напускане..."
-                SelectedDate="{Binding CheckOutDate}" />
-
+        <!--  Бутон за запис  -->
+        <StackPanel
+            Grid.Row="4"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <TextBlock
+                Margin="0,0,10,0"
+                VerticalAlignment="Center"
+                Text="{Binding TotalPriceText}" />
             <Button
-                Width="130"
-                Height="40"
-                Margin="0,10,0,10"
-                Background="#4CAF50"
-                BorderThickness="0"
-                Command="{Binding CreateReservationCommand}"
-                Content="Create Reservation"
-                Cursor="Hand"
-                FontWeight="Bold"
-                Foreground="White" />
+                Padding="10,5"
+                Command="{Binding SaveReservationCommand}"
+                Content="Запази резервация" />
         </StackPanel>
     </Grid>
 </UserControl>

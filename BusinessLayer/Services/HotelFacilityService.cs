@@ -38,13 +38,18 @@ namespace BusinessLayer.Services
         }
         public List<HotelFacilityDTO> GetFacilitiesForHotel(int? hotelId)
         {
-            return GetFacilitiesByHotelId(hotelId)
-                .Select(hf => new HotelFacilityDTO
-                {
-                    FacilityId = hf.FacilityId,
-                    Price = hf.Price,
-                    Discount = hf.DiscountPercentage
-                }).ToList();
+            var hotelFacilities = GetFacilitiesByHotelId(hotelId);
+
+            var facilities = _context.Facilities
+                .ToDictionary(f => f.Id, f => f.Name);
+
+            return hotelFacilities.Select(hf => new HotelFacilityDTO
+            {
+                FacilityId = hf.FacilityId,
+                FacilityName = facilities.ContainsKey(hf.FacilityId) ? facilities[hf.FacilityId] : "Непознато",
+                Price = hf.Price,
+                Discount = hf.DiscountPercentage ?? 0
+            }).ToList();
         }
 
         public void SaveFacilitiesForHotel(int hotelId, List<HotelFacilityDTO> facilityDtos)

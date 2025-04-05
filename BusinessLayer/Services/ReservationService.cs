@@ -1,34 +1,82 @@
 ﻿using DataLayer.Models;
-using DataLayer.Repositories;
 
 namespace BusinessLayer.Services
 {
-    public class ReservationService
+    public class ReservationService : BaseService
     {
-        private readonly IReservationRepository _reservationRepository;
+        public ReservationService(HotelDbContextModel context) : base(context) { }
 
-        public ReservationService(IReservationRepository reservationRepository)
+        public async Task AddReservationAsync(
+        int hotelId,
+        int userId,
+        RoomTypeEnum roomType,
+        DateTime checkIn,
+        DateTime checkOut,
+        List<HotelFacilityModel> selectedFacilities,
+        int paymentMethodId)
         {
-            _reservationRepository = reservationRepository;
+            decimal basePrice = GetBaseRoomPrice(roomType);
+
+            // Изчисли цена на удобства с отстъпка
+            decimal facilityTotalPrice = 0;
+            foreach (var facility in selectedFacilities)
+            {
+                decimal discountPercentage = facility.DiscountPercentage.HasValue
+                    ? (decimal)facility.DiscountPercentage.Value
+                    : 0;
+
+                decimal discountMultiplier = (100 - discountPercentage) / 100;
+                facilityTotalPrice += facility.Price * discountMultiplier;
+            }
+
+            int numberOfNights = Math.Max(1, (int)(checkOut - checkIn).TotalDays);
+            decimal totalPrice = (basePrice + facilityTotalPrice) * numberOfNights;
+
+            // Създай плащане
+            var payment = new PaymentModel
+            {
+                Amount = totalPrice,
+                PaymentDate = DateTime.Now,
+                PaymentMethodId = paymentMethodId
+            };
+
+            _context.Payments.Add(payment);
+            await _context.SaveChangesAsync();
+
+            // !!! Забележка: ReservationModel очаква List<FacilityModel>, а не HotelFacilityModel.
+            // Трябва да конвертираме избраните HotelFacilityModel към FacilityModel.
+
+            var facilityModels = selectedFacilities
+                .Select(f => _context.Facilities.FirstOrDefault(x => x.Id == f.FacilityId))
+                .Where(x => x != null)
+                .ToList();
+
+            var reservation = new ReservationModel
+            {
+                HotelId = hotelId,
+                UserId = userId,
+                RoomType = roomType,
+                CheckInDate = checkIn,
+                CheckOutDate = checkOut,
+                Price = totalPrice,
+                UsedFacilities = facilityModels,
+                PaymentId = payment.Id
+            };
+
+            _context.Reservations.Add(reservation);
+            await _context.SaveChangesAsync();
         }
 
-        //public void AddReservation(ReservationModel reservation)
-        //{
-        //    if (reservation.Payment == null)
-        //        throw new InvalidOperationException("Резервацията трябва да има плащане!");
-
-        //    // Проверка за -10% намаление, ако удобството е басейн или друго несистемно дефинирано удобство
-        //    if (reservation.UsedFacilities.Any(f => f.Type == FacilityTypeEnum.Pool))
-        //    {
-        //        reservation.Price *= 0.9m; // Намаляваме цената с 10%
-        //    }
-
-        //    _reservationRepository.AddReservation(reservation);
-        //}
-
-        public List<ReservationModel> GetAllReservations()
+        private decimal GetBaseRoomPrice(RoomTypeEnum roomType)
         {
-            return _reservationRepository.GetAllReservations();
+            return roomType switch
+            {
+                RoomTypeEnum.Single => 50,
+                RoomTypeEnum.Double => 80,
+                RoomTypeEnum.Luxury => 150,
+                _ => 0
+            };
         }
     }
+
 }

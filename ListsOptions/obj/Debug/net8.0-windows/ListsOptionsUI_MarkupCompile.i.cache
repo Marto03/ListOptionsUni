@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\marti\Desktop\Uni\ПС\ListsOptions\ListsOptions\App.xaml
 9-1292797277
 
-3418042133
+35-1306265580
 221-580779240
 MainWindow.xaml;Views\FacilityView.xaml;Views\HotelConfigurationView.xaml;Views\HotelFacilityEditorView.xaml;Views\PaymentMethodView.xaml;Views\ReservationView.xaml;Views\RoomTypeView.xaml;Views\UserDetailsView.xaml;Views\UserView.xaml;
 
-True
+False
 

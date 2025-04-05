@@ -14,7 +14,7 @@ namespace DataLayer.Services
 
         public void AddPaymentMethod(string name)
         {
-            if (_context.PaymentMethods.Any(p => p.Type.ToString().ToLower().Trim() == name.ToLower().Trim() || p.Name.ToLower().Trim() == name.ToLower().Trim()))
+            if (_context.PaymentMethods.AsEnumerable().Any(p => p.Type.ToString().ToLower().Trim() == name.ToLower().Trim() || p.Name.ToLower().Trim() == name.ToLower().Trim()))
             {
                 throw new InvalidOperationException("Payment method already exists.");
             }

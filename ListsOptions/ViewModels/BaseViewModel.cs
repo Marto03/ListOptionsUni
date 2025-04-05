@@ -14,6 +14,8 @@ namespace ListsOptionsUI.ViewModels
         public UserModel? CurrentUser => UserSessionService.Instance.CurrentUser;
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        internal bool CanSave => CurrentUser?.Type == UserTypeEnum.Admin;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

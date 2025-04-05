@@ -73,7 +73,15 @@
                         Background="Transparent"
                         BorderBrush="Transparent"
                         Command="{Binding OpenHotelConfigurationCommand}"
-                        Content="Конфигурация на хотели"
+                        Content="Хотели"
+                        FontSize="14"
+                        Foreground="White" />
+                    <Button
+                        Padding="10,5"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Command="{Binding OpenReservationCreatingCommand}"
+                        Content="Резервация"
                         FontSize="14"
                         Foreground="White" />
                 </StackPanel>

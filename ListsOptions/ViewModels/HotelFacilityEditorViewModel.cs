@@ -14,6 +14,21 @@ namespace ListsOptionsUI.ViewModels
         private readonly HotelFacilityService _facilityService;
         private readonly FacilityService _facilityListService;
 
+
+        public HotelFacilityEditorViewModel(HotelFacilityService service, FacilityService facilityListService)
+        {
+            _facilityService = service;
+            _facilityListService = facilityListService;
+
+            AddFacilityCommand = new RelayCommand(AddFacility, _ => CanSave && CurrentHotel != null);
+            RemoveFacilityCommand = new RelayCommand<HotelFacilityDTO>(RemoveFacility);
+            SaveCommand = new RelayCommand(SaveFacilities, _ => CanSave && CurrentHotel != null);
+
+            LoadFacilities();
+            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+            Events.AppEvents.UsersChanged += () => LoadFacilities();
+        }
+
         public ObservableCollection<FacilityModel> AvailableFacilities { get; set; } = new();
         public ObservableCollection<HotelFacilityDTO> FacilityList { get; set; } = new();
 
@@ -26,25 +41,6 @@ namespace ListsOptionsUI.ViewModels
         public ICommand AddFacilityCommand { get; }
         public ICommand RemoveFacilityCommand { get; }
         public ICommand SaveCommand { get; }
-
-        public HotelFacilityEditorViewModel(HotelFacilityService service, FacilityService facilityListService)
-        {
-            _facilityService = service;
-            _facilityListService = facilityListService;
-
-            AddFacilityCommand = new RelayCommand(AddFacility);
-            RemoveFacilityCommand = new RelayCommand<HotelFacilityDTO>(RemoveFacility);
-            SaveCommand = new RelayCommand(SaveFacilities);
-
-            LoadFacilities();
-            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
-            Events.AppEvents.UsersChanged += () => LoadFacilities();
-        }
-
-        private void OnCurrentUserChanged(UserModel? user)
-        {
-            LoadFacilities();
-        }
         public void LoadFacilities()
         {
             OnPropertyChanged(nameof(CurrentUser));
@@ -59,6 +55,10 @@ namespace ListsOptionsUI.ViewModels
             foreach (var f in current)
                 FacilityList.Add(f);
             OnPropertyChanged(nameof(CurrentHotel));
+        }
+        private void OnCurrentUserChanged(UserModel? user)
+        {
+            LoadFacilities();
         }
 
         private void AddFacility(object o)

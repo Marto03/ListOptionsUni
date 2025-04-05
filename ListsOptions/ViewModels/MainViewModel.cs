@@ -34,6 +34,7 @@ namespace ListsOptionsUI.ViewModels
             OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
             OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
             OpenHotelConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на хотели", new HotelConfigurationView(App.ServiceProvider.GetRequiredService<HotelConfigurationViewModel>())));
+            OpenReservationCreatingCommand = new RelayCommand(o => OpenTab("Създаване на резервация", new ReservationView(App.ServiceProvider.GetRequiredService<ReservationViewModel>())));
             this.userViewModel = userViewModel;
         }
         #endregion
@@ -46,6 +47,7 @@ namespace ListsOptionsUI.ViewModels
         public ICommand OpenRoomTypeCommand { get; }
         public ICommand OpenUserConfigurationCommand { get; }
         public ICommand OpenHotelConfigurationCommand { get; }
+        public ICommand OpenReservationCreatingCommand { get; }
 
         public UserViewModel UserViewModel
         {
