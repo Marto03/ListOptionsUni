@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="ListsOptionsUI.Views.HotelFacilityEditorView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:helpers="clr-namespace:ListsOptionsUI.Helpers"
+    xmlns:local="clr-namespace:ListsOptionsUI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="{Binding CurrentHotel, UpdateSourceTrigger=PropertyChanged}">
+            <StackPanel>
+                <!--  Добавяне на удобство  -->
+                <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                    <ComboBox
+                        Width="150"
+                        Margin="5"
+                        DisplayMemberPath="Name"
+                        ItemsSource="{Binding AvailableFacilities}"
+                        SelectedItem="{Binding SelectedFacility}" />
+
+                    <TextBox
+                        Width="100"
+                        Margin="5"
+                        helpers:PlaceholderHelper.PlaceholderText="Цена"
+                        Text="{Binding NewPrice}" />
+
+                    <TextBox
+                        Width="100"
+                        Margin="5"
+                        helpers:PlaceholderHelper.PlaceholderText="Отстъпка %"
+                        Text="{Binding NewDiscount}" />
+
+                    <Button
+                        Margin="5"
+                        Command="{Binding AddFacilityCommand}"
+                        Content="Добави" />
+                </StackPanel>
+
+                <!--  Списък с текущи удобства  -->
+                <ListBox
+                    Grid.Row="1"
+                    Margin="0,0,0,10"
+                    ItemsSource="{Binding FacilityList}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="5" Text="{Binding FacilityName}" />
+                                <TextBlock Text=" | Цена: " />
+                                <TextBlock Margin="5" Text="{Binding Price}" />
+                                <TextBlock Text=" | Отстъпка: " />
+                                <TextBlock Margin="5" Text="{Binding Discount}" />
+                                <Button
+                                    Margin="10,0"
+                                    Command="{Binding DataContext.RemoveFacilityCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                    CommandParameter="{Binding}"
+                                    Content="Премахни" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <!--  Запазване  -->
+                <Button
+                    Grid.Row="2"
+                    Width="100"
+                    Height="30"
+                    HorizontalAlignment="Right"
+                    Command="{Binding SaveCommand}"
+                    Content="Запази" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

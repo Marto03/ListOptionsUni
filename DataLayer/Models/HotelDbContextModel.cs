@@ -10,6 +10,8 @@ namespace DataLayer.Models
         public DbSet<HotelModel> Hotels { get; set; }
         public DbSet<ReservationModel> Reservations { get; set; }
         public DbSet<PaymentModel> Payments { get; set; }
+        public DbSet<HotelFacilityModel> HotelFacilities { get; set; }
+
         public HotelDbContextModel(DbContextOptions<HotelDbContextModel> options)
             : base(options)
         {
@@ -62,6 +64,10 @@ namespace DataLayer.Models
             // Конфигуриране на PaymentModel
             modelBuilder.Entity<PaymentModel>()
                 .HasKey(p => p.Id);
+
+            // Конфигуриране на HotelFacilityModel
+            modelBuilder.Entity<HotelFacilityModel>()
+                .HasKey(hf => hf.Id);
 
             // Вмъкване на системни платежни методи
             modelBuilder.Entity<PaymentMethodModel>().HasData(

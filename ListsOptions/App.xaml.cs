@@ -28,6 +28,8 @@ public partial class App : Application
         services.AddScoped<RoomTypeService>();
         services.AddScoped<UserService>();
 
+        services.AddScoped<HotelFacilityService>();
+
         // Регистрираме Repository слоя
         services.AddScoped<IHotelRepository, HotelRepository>();
         //services.AddScoped<IReservationRepository, ReservationRepository>();
@@ -47,6 +49,7 @@ public partial class App : Application
         services.AddScoped<MainViewModel>();
 
         services.AddScoped<HotelConfigurationViewModel>();
+        services.AddScoped<HotelFacilityEditorViewModel>();
         //services.AddScoped<PaymentMethodViewModel>();
         services.AddScoped<MainWindow>();
 

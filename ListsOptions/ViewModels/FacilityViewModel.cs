@@ -1,6 +1,9 @@
-﻿using DataLayer.Models;
+﻿using BusinessLayer.Services;
+using DataLayer.Models;
 using DataLayer.Services;
+using ListsOptions;
 using ListsOptionsUI.Commands;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -20,6 +23,7 @@ namespace ListsOptionsUI.ViewModels
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
             DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => _ is FacilityModel selectedFacilityModel && selectedFacilityModel?.IsCustomAdded == true && CurrentUser?.Type == UserTypeEnum.Admin);
+            HotelFacilityEditorViewModel = new HotelFacilityEditorViewModel(App.ServiceProvider.GetRequiredService<HotelFacilityService>(), facilityService);
         }
         #endregion
         #region Properties
@@ -35,6 +39,7 @@ namespace ListsOptionsUI.ViewModels
                 OnPropertyChanged(nameof(NewFacilityName));
             }
         }
+        public HotelFacilityEditorViewModel HotelFacilityEditorViewModel { get; set; }
         #endregion
         #region Methods
         private void AddFacility(object o)
@@ -49,6 +54,7 @@ namespace ListsOptionsUI.ViewModels
                         Facilities.Add(newFacility); // Добавяме реалния обект с валидно Id
                         NewFacilityName = "";
                         OnPropertyChanged(nameof(Facilities));
+                        HotelFacilityEditorViewModel.LoadFacilities();
                     }
                 }
                 catch (InvalidOperationException)
@@ -65,6 +71,7 @@ namespace ListsOptionsUI.ViewModels
                 facilityService.RemoveFacility(facility);
                 Facilities.Remove(facility);
                 OnPropertyChanged(nameof(Facilities));
+                HotelFacilityEditorViewModel.LoadFacilities();
             }
         }
         #endregion
