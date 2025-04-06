@@ -4,6 +4,7 @@ using ListsOptions;
 using ListsOptionsUI.Commands;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -113,9 +114,15 @@ namespace ListsOptionsUI.ViewModels
             {
                 Name = NewHotelName,
             };
-
-            _hotelService.AddHotel(newHotel);
-            Hotels.Add(newHotel);
+            try
+            {
+                _hotelService.AddHotel(newHotel);
+                Hotels.Add(newHotel);
+            }
+            catch(InvalidOperationException e)
+            {
+                MessageBox.Show(e.Message, "Грешен хотел", MessageBoxButton.OK);
+            }
         }
     }
 }

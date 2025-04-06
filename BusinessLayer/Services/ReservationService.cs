@@ -1,4 +1,5 @@
 ﻿using DataLayer.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BusinessLayer.Services
 {
@@ -6,77 +7,88 @@ namespace BusinessLayer.Services
     {
         public ReservationService(HotelDbContextModel context) : base(context) { }
 
-        public async Task AddReservationAsync(
-        int hotelId,
-        int userId,
-        RoomTypeEnum roomType,
-        DateTime checkIn,
-        DateTime checkOut,
-        List<HotelFacilityModel> selectedFacilities,
-        int paymentMethodId)
+        public async Task AddReservationAsync(ReservationModel reservation)
         {
-            decimal basePrice = GetBaseRoomPrice(roomType);
+            var totalPrice = await CalculateTotalPriceAsync(reservation.HotelId, reservation.UsedFacilities, reservation.RoomType, Math.Max(1, (int)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays));
 
-            // Изчисли цена на удобства с отстъпка
-            decimal facilityTotalPrice = 0;
-            foreach (var facility in selectedFacilities)
-            {
-                decimal discountPercentage = facility.DiscountPercentage.HasValue
-                    ? (decimal)facility.DiscountPercentage.Value
-                    : 0;
-
-                decimal discountMultiplier = (100 - discountPercentage) / 100;
-                facilityTotalPrice += facility.Price * discountMultiplier;
-            }
-
-            int numberOfNights = Math.Max(1, (int)(checkOut - checkIn).TotalDays);
-            decimal totalPrice = (basePrice + facilityTotalPrice) * numberOfNights;
-
-            // Създай плащане
+            // Създай PaymentModel
             var payment = new PaymentModel
             {
                 Amount = totalPrice,
-                PaymentDate = DateTime.Now,
-                PaymentMethodId = paymentMethodId
+                HotelId = reservation.HotelId,
+                PaymentMethodId = reservation.PaymentId
             };
 
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
 
-            // !!! Забележка: ReservationModel очаква List<FacilityModel>, а не HotelFacilityModel.
-            // Трябва да конвертираме избраните HotelFacilityModel към FacilityModel.
-
-            var facilityModels = selectedFacilities
-                .Select(f => _context.Facilities.FirstOrDefault(x => x.Id == f.FacilityId))
-                .Where(x => x != null)
-                .ToList();
-
-            var reservation = new ReservationModel
+            var dbReservation = new ReservationModel
             {
-                HotelId = hotelId,
-                UserId = userId,
-                RoomType = roomType,
-                CheckInDate = checkIn,
-                CheckOutDate = checkOut,
+                HotelId = reservation.HotelId,
+                UserId = reservation.UserId,
+                RoomType = reservation.RoomType,
+                CheckInDate = reservation.CheckInDate,
+                CheckOutDate = reservation.CheckOutDate,
                 Price = totalPrice,
-                UsedFacilities = facilityModels,
-                PaymentId = payment.Id
+                PaymentId = payment.Id,
+                UsedFacilities = reservation.UsedFacilities
+                
             };
 
-            _context.Reservations.Add(reservation);
+            _context.Reservations.Add(dbReservation);
             await _context.SaveChangesAsync();
+
         }
 
-        private decimal GetBaseRoomPrice(RoomTypeEnum roomType)
+        public async Task<decimal> CalculateTotalPriceAsync(int? hotelId, List<int> usedFacilities, RoomTypeEnum roomType, int nightsNumber)
         {
-            return roomType switch
+            decimal totalPrice = 0;
+
+            // Изчисляваме цената за удобствата
+            foreach (int facilityId in usedFacilities)
+            {
+                var hotelFacility = await _context.HotelFacilities
+                    .FirstOrDefaultAsync(hf => hf.HotelId == hotelId && hf.FacilityId == facilityId);
+
+                if (hotelFacility != null)
+                {
+                    decimal facilityPrice = hotelFacility.Price;
+
+                    if (hotelFacility.DiscountPercentage.HasValue)
+                    {
+                        facilityPrice -= facilityPrice * (decimal)(hotelFacility.DiscountPercentage.Value / 100.0);
+                    }
+
+                    totalPrice += facilityPrice;
+                }
+            }
+
+            // Примерна базова цена за типа стая
+            decimal baseRoomPrice = roomType switch
             {
                 RoomTypeEnum.Single => 50,
                 RoomTypeEnum.Double => 80,
-                RoomTypeEnum.Luxury => 150,
+                RoomTypeEnum.Luxury => 120,
                 _ => 0
             };
+
+            totalPrice += baseRoomPrice;
+
+            return totalPrice * nightsNumber;
         }
+        public async Task<List<ReservationModel>> GetReservationsByHotelAsync(int hotelId)
+        {
+            // Използваме Include за да заредим свързаните обекти по ID
+            var reservations = await _context.Reservations
+                                              .Where(r => r.HotelId == hotelId)
+                                              .Include(r => r.Hotel)               // Зареждаме информацията за хотела
+                                              .Include(r => r.User)                // Зареждаме информацията за потребителя
+                                              .Include(r => r.Facilities)          // Зареждаме свързаните удобства
+                                              .Include(r => r.PaymentMethod)       // Зареждаме информацията за метода на плащане
+                                              .ToListAsync();
+            return reservations;
+        }
+
     }
 
 }

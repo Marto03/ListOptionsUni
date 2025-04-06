@@ -20,7 +20,7 @@ namespace DataLayer.Repositories
 
         public List<HotelModel> GetAllHotels()
         {
-            return _context.Hotels.Include(h => h.Facilities).ToList();
+            return _context.Hotels.ToList();
         }
     }
 

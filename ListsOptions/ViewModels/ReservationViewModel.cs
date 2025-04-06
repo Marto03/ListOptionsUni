@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Services;
+using Common.DTOs;
 using DataLayer.Models;
 using DataLayer.Services;
 using ListsOptionsUI.Commands;
@@ -11,121 +12,188 @@ namespace ListsOptionsUI.ViewModels
     public class ReservationViewModel : BaseViewModel
     {
         private readonly ReservationService _reservationService;
+        private readonly HotelFacilityService _hotelFacilityService;
+        private readonly PaymentMethodService _paymentMethodService;
+        private RoomTypeEnum _selectedRoomType;
+        private PaymentMethodModel _selectedPaymentMethod;
+        private DateTime _checkInDate = DateTime.Today;
+        private DateTime _checkOutDate = DateTime.Today.AddDays(1);
+        private decimal _totalPrice;
+        private int? _previousHotelId;
+        private ObservableCollection<PaymentMethodModel> _previousPaymentMethods;
+        private bool CanAddReservation => SelectedPaymentMethod != null && CheckOutDate > CheckInDate && CurrentUser?.HotelId != null;
 
-        public ObservableCollection<HotelFacilityModel> AvailableFacilities { get; set; } = new();
-        public ObservableCollection<HotelFacilityModel> SelectedFacilities { get; set; } = new();
-        public ObservableCollection<PaymentMethodModel> PaymentMethods { get; set; } = new();
-        public ObservableCollection<RoomTypeEnum> RoomTypes { get; set; } = new();
-
-        public RoomTypeEnum SelectedRoomType { get; set; }
-        public HotelModel CurrentHotel { get; set; }
-        public int CurrentUserId { get; set; }
-        public PaymentMethodModel SelectedPaymentMethod { get; set; }
-
-        public DateTime CheckInDate { get; set; } = DateTime.Today;
-        public DateTime CheckOutDate { get; set; } = DateTime.Today.AddDays(1);
-
-        public ICommand AddReservationCommand { get; set; }
-
-        public ReservationViewModel(ReservationService reservationService)
+        public ReservationViewModel(ReservationService reservationService, HotelFacilityService hotelFacilityService, PaymentMethodService paymentMethodService)
         {
             _reservationService = reservationService;
-            AddReservationCommand = new RelayCommand(async _ => await AddReservationAsync());
-            LoadRoomTypes();
-        }
+            _hotelFacilityService = hotelFacilityService;
+            _paymentMethodService = paymentMethodService;
 
-        private void LoadRoomTypes()
+            RoomTypes = new ObservableCollection<RoomTypeEnum>((RoomTypeEnum[])Enum.GetValues(typeof(RoomTypeEnum)));
+            PaymentMethods = new ObservableCollection<PaymentMethodModel>(_paymentMethodService.GetPaymentMethods());
+            AvailableFacilities = new ObservableCollection<HotelFacilityDTO>();
+            _previousHotelId = CurrentUser?.HotelId;
+            _previousPaymentMethods = PaymentMethods;
+            FacilitySelectionChangedCommand = new RelayCommand(async _ => await Refresh());
+
+            SaveReservationCommand = new RelayCommand(async _ => await SaveReservationAsync(), _ => CanAddReservation);
+            LoadFacilities();
+
+        }
+        public ICommand FacilitySelectionChangedCommand { get; }
+        public ObservableCollection<RoomTypeEnum> RoomTypes { get; }
+        public ObservableCollection<PaymentMethodModel> PaymentMethods { get; }
+        public ObservableCollection<HotelFacilityDTO> AvailableFacilities { get; }
+        public ObservableCollection<HotelFacilityDTO> SelectedFacilities { get; } = new();
+
+        public RoomTypeEnum SelectedRoomType
         {
-            RoomTypes.Clear();
-            foreach (var type in Enum.GetValues(typeof(RoomTypeEnum)).Cast<RoomTypeEnum>())
+            get => _selectedRoomType;
+            set
             {
-                RoomTypes.Add(type);
+                _selectedRoomType = value;
+                OnPropertyChanged(nameof(SelectedRoomType));
+                CalculateTotalPrice();
             }
         }
 
-        public void LoadData(HotelModel hotel, int userId,
-            IEnumerable<HotelFacilityModel> hotelFacilities, IEnumerable<PaymentMethodModel> paymentMethods)
+        public PaymentMethodModel SelectedPaymentMethod
         {
-            CurrentHotel = hotel;
-            CurrentUserId = userId;
-
-            AvailableFacilities = new ObservableCollection<HotelFacilityModel>(hotelFacilities);
-            PaymentMethods = new ObservableCollection<PaymentMethodModel>(paymentMethods);
+            get => _selectedPaymentMethod;
+            set
+            {
+                _selectedPaymentMethod = value;
+                OnPropertyChanged(nameof(SelectedPaymentMethod));
+            }
         }
 
-        private async Task AddReservationAsync()
+        public DateTime CheckInDate
         {
-            if (SelectedPaymentMethod == null || CheckOutDate <= CheckInDate)
-                return;
-
-            await _reservationService.AddReservationAsync(
-                hotelId: CurrentHotel.Id,
-                userId: CurrentUserId,
-                roomType: SelectedRoomType,
-                checkIn: CheckInDate,
-                checkOut: CheckOutDate,
-                selectedFacilities: SelectedFacilities.ToList(),
-                paymentMethodId: SelectedPaymentMethod.Id);
+            get => _checkInDate;
+            set
+            {
+                _checkInDate = value;
+                OnPropertyChanged(nameof(CheckInDate));
+                CalculateTotalPrice();
+            }
         }
 
+        public DateTime CheckOutDate
+        {
+            get => _checkOutDate;
+            set
+            {
+                _checkOutDate = value;
+                OnPropertyChanged(nameof(CheckOutDate));
+                CalculateTotalPrice();
+            }
+        }
 
-        //private readonly ReservationService _reservationService;
-        //private readonly HotelModel _currentHotel;
-        //private readonly UserModel _currentUser;
+        public decimal TotalPrice
+        {
+            get => _totalPrice;
+            set
+            {
+                _totalPrice = value;
+                OnPropertyChanged(nameof(TotalPrice));
+            }
+        }
 
-        //public ObservableCollection<FacilityModel> AvailableFacilities { get; set; }
-        //public ObservableCollection<HotelFacilityModel> SelectedFacilities { get; set; } = new();
+        public ICommand SaveReservationCommand { get; }
 
-        //public ObservableCollection<PaymentModel> PaymentMethods { get; set; }
+        private async Task SaveReservationAsync()
+        {
+            if (!CanAddReservation) return;
 
-        //public RoomTypeEnum SelectedRoomType { get; set; }
-        //public PaymentMethodModel SelectedPaymentMethod { get; set; }
-        //public HotelFacilityModel SelectedFacility { get; set; }
+            try
+            {
+                //var s = App.ServiceProvider.GetRequiredService<FacilityService>();
+                //s.GetAllFacilities().Where(r=>r.Id == SelectedFacilities.)
+                var reservation = new ReservationModel
+                {
+                    HotelId = CurrentUser.HotelId.Value,
+                    UserId = CurrentUser.Id,
+                    RoomType = SelectedRoomType,
+                    CheckInDate = CheckInDate,
+                    CheckOutDate = CheckOutDate,
+                    Price = TotalPrice,
+                    UsedFacilities = AvailableFacilities.Where(r=>r.IsSelected).Select(f => f.FacilityId).ToList(),
+                    PaymentId = SelectedPaymentMethod.Id
+                };
 
-        //public DateTime CheckInDate { get; set; } = DateTime.Now;
-        //public DateTime CheckOutDate { get; set; } = DateTime.Now.AddDays(1);
+                await _reservationService.AddReservationAsync(reservation);
+                MessageBox.Show("Резервацията е създадена успешно!", "Успешен запис", MessageBoxButton.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Неуспешен запис: {ex.Message}", "Грешка", MessageBoxButton.OK);
+            }
+        }
 
-        //public ICommand AddFacilityCommand { get; }
-        //public ICommand SaveReservationCommand { get; }
+        private void LoadFacilities()
+        {
+            if (CurrentUser?.HotelId != null)
+            {
+                var facilities = _hotelFacilityService.GetFacilitiesForHotel(CurrentUser.HotelId.Value);
+                AvailableFacilities.Clear();
+                foreach (var facility in facilities)
+                {
+                    //facility.PropertyChanged += Facility_PropertyChanged;
+                    AvailableFacilities.Add(facility);
+                }
+            }
+            else
+                AvailableFacilities.Clear();
+        }
 
-        //public ReservationViewModel(ReservationService reservationService, HotelModel hotel, UserModel user)
-        //{
-        //    _reservationService = reservationService;
-        //    _currentHotel = hotel;
-        //    _currentUser = user;
+        private async Task CalculateTotalPrice()
+        {
+            if (CheckOutDate <= CheckInDate) return;
 
-        //    LoadInitialData();
+            int numberOfNights = Math.Max(1, (int)(CheckOutDate - CheckInDate).TotalDays);
 
-        //    AddFacilityCommand = new RelayCommand(AddFacility);
-        //    SaveReservationCommand = new RelayCommand(async () => await SaveReservation());
-        //}
+            TotalPrice = await _reservationService.CalculateTotalPriceAsync(CurrentUser?.HotelId ?? 0, AvailableFacilities?.Where(r => r.IsSelected).Select(f => f.FacilityId).ToList(), SelectedRoomType, numberOfNights);
+        }
+        private async Task Refresh()
+        {
+            if (CurrentUser?.HotelId != null && (_previousHotelId != CurrentUser?.HotelId || _hotelFacilityService.GetFacilitiesForHotel(CurrentUser?.HotelId.Value)?.Count() != AvailableFacilities?.Count()))
+            {
+                _previousHotelId = CurrentUser?.HotelId;
+                LoadFacilities();
+            }
+            var latestMethods = _paymentMethodService.GetPaymentMethods();
+            if (PaymentMethodsChanged(latestMethods))
+            {
+                RefreshPaymentMethods();
+            }
 
-        //private void LoadInitialData()
-        //{
-        //    AvailableFacilities = new ObservableCollection<FacilityModel>(_currentHotel.Facilities);
-        //    PaymentMethods = new ObservableCollection<PaymentModel>(_currentHotel.Payments);
-        //}
+            if (CheckOutDate <= CheckInDate) return;
 
-        //private void AddFacility()
-        //{
-        //    if (SelectedFacility != null && !SelectedFacilities.Contains(SelectedFacility))
-        //        SelectedFacilities.Add(SelectedFacility);
-        //}
+            int numberOfNights = Math.Max(1, (int)(CheckOutDate - CheckInDate).TotalDays);
 
-        //private async Task SaveReservation()
-        //{
-        //    await _reservationService.AddReservationAsync(
-        //        _currentHotel.Id,
-        //        _currentUser.Id,
-        //        SelectedRoomType,
-        //        CheckInDate,
-        //        CheckOutDate,
-        //        SelectedFacilities.ToList(),
-        //        SelectedPaymentMethod.Id
-        //    );
+            TotalPrice = await _reservationService.CalculateTotalPriceAsync(CurrentUser?.HotelId ?? 0, AvailableFacilities?.Where(r => r.IsSelected).Select(f => f.FacilityId).ToList(), SelectedRoomType, numberOfNights);
+        }
+        private void RefreshPaymentMethods()
+        {
+            PaymentMethods.Clear();
+            foreach (var method in _paymentMethodService.GetPaymentMethods())
+            {
+                PaymentMethods.Add(method);
+            }
+        }
+        private bool PaymentMethodsChanged(List<PaymentMethodModel> newMethods)
+        {
+            if (newMethods.Count != PaymentMethods.Count)
+                return true;
 
-        //    MessageBox.Show("Резервацията е записана успешно!");
-        //}
+            for (int i = 0; i < newMethods.Count; i++)
+            {
+                var existing = PaymentMethods.FirstOrDefault(m => m.Id == newMethods[i].Id);
+                if (existing == null || existing.Name != newMethods[i].Name)
+                    return true;
+            }
+
+            return false;
+        }
     }
-
 }

@@ -7,6 +7,7 @@
         public DateTime PaymentDate { get; set; } = DateTime.Now;
 
         public int PaymentMethodId { get; set; }  // FK към метода на плащане
+        public int HotelId { get; set; }
 
         //public PaymentMethodModel PaymentMethod { get; set; }  // Навигационно свойство
     }

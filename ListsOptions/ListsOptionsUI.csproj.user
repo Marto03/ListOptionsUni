@@ -14,6 +14,9 @@
     <Compile Update="Views\PaymentMethodView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ReservationsListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ReservationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

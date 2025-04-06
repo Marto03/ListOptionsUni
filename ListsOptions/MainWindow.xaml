@@ -84,6 +84,14 @@
                         Content="Резервация"
                         FontSize="14"
                         Foreground="White" />
+                    <Button
+                        Padding="10,5"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Command="{Binding OpenReservationsListCommand}"
+                        Content="Списък с резервации"
+                        FontSize="14"
+                        Foreground="White" />
                 </StackPanel>
 
                 <!--  Останалата част от лентата с различен цвят  -->

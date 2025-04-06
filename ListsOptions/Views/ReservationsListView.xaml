@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="ListsOptionsUI.Views.ReservationsListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ListsOptionsUI.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <ComboBox
+            x:Name="HotelComboBox"
+            Width="200"
+            Margin="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            DisplayMemberPath="Name"
+            SelectedItem="{Binding SelectedHotel}">
+            <ComboBox.ItemsSource>
+                <Binding Path="Hotels" />
+            </ComboBox.ItemsSource>
+        </ComboBox>
+        <Button
+            Padding="10,5"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Command="{Binding LoadReservationsCommand}"
+            Content="Рефреш" />
+
+        <DataGrid
+            x:Name="ReservationsDataGrid"
+            Margin="10,50,10,10"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AutoGenerateColumns="False"
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            IsReadOnly="True"
+            ItemsSource="{Binding Reservations}">
+
+            <DataGrid.Columns>
+                <!--  Име на хотела  -->
+                <DataGridTextColumn Binding="{Binding Hotel.Name}" Header="Хотел" />
+
+                <!--  Име на потребителя  -->
+                <DataGridTextColumn Binding="{Binding User.UserName}" Header="Потребител" />
+
+                <!--  Начин на плащане  -->
+                <DataGridTextColumn Binding="{Binding PaymentMethod.Name}" Header="Плащане" />
+
+                <!--  Тип стая  -->
+                <DataGridTextColumn Binding="{Binding RoomType}" Header="Тип стая" />
+
+                <!--  Дати  -->
+                <DataGridTextColumn Binding="{Binding CheckInDate, StringFormat=dd.MM.yyyy}" Header="Дата на настаняване" />
+                <DataGridTextColumn Binding="{Binding CheckOutDate, StringFormat=dd.MM.yyyy}" Header="Дата на напускане" />
+
+                <!--  Крайна цена  -->
+                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" />
+
+                <!--  Удобства (като списък от имена)  -->
+                <DataGridTextColumn Binding="{Binding UsedFacilitiesAsString}" Header="Удобства" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

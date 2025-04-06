@@ -51,6 +51,7 @@ public partial class App : Application
         services.AddScoped<HotelConfigurationViewModel>();
         services.AddScoped<HotelFacilityEditorViewModel>();
         services.AddScoped<ReservationViewModel>();
+        services.AddScoped<ReservationsListViewModel>();
         //services.AddScoped<PaymentMethodViewModel>();
         services.AddScoped<MainWindow>();
 

@@ -28,21 +28,18 @@ namespace DataLayer.Models
         [Required]
         public decimal Price { get; set; }
 
-        public List<FacilityModel> UsedFacilities { get; set; } = new();
+        public List<int> UsedFacilities { get; set; } = new();
 
         public int PaymentId { get; set; }
 
+        // Добавяне на навигационни свойства:
+        public virtual HotelModel Hotel { get; set; }  // Свързано с Hotel
+        public virtual UserModel User { get; set; }    // Свързано с User
+        public virtual PaymentMethodModel PaymentMethod { get; set; } // Свързано с PaymentMethod
+        public virtual List<FacilityModel> Facilities { get; set; }  // Свързано с Facilities (може да се използва за изтегляне на детайлите на удобствата)
 
+        [NotMapped]
+        public string UsedFacilitiesAsString { get; set; }
 
-
-        public void CalculateFinalPrice()
-        {
-            decimal discount = 0;
-            if (UsedFacilities.Any(f => f.Type == null || f.Type == FacilityTypeEnum.Pool))
-            {
-                discount = 0.10m; // 10% намаление
-            }
-            Price -= Price * discount;
-        }
     }
 }

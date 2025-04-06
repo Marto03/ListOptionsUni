@@ -57,9 +57,31 @@ namespace DataLayer.Models
             modelBuilder.Entity<HotelModel>()
                 .HasKey(p => p.Id);
 
+
             // Конфигуриране на ReservationModel
             modelBuilder.Entity<ReservationModel>()
                 .HasKey(p => p.Id);
+
+            modelBuilder.Entity<ReservationModel>()
+                .Property(p => p.RoomType)
+                .HasConversion<string>();
+
+
+            modelBuilder.Entity<ReservationModel>()
+            .HasOne(r => r.Hotel)
+            .WithMany() // Свързване на хотел към много резервации
+            .HasForeignKey(r => r.HotelId);
+
+            modelBuilder.Entity<ReservationModel>()
+                .HasOne(r => r.User)
+                .WithMany() // Потребител към много резервации
+                .HasForeignKey(r => r.UserId);
+
+            modelBuilder.Entity<ReservationModel>()
+                .HasOne(r => r.PaymentMethod)
+                .WithMany() // Много резервации могат да използват един метод на плащане
+                .HasForeignKey(r => r.PaymentId);
+
 
             // Конфигуриране на PaymentModel
             modelBuilder.Entity<PaymentModel>()
