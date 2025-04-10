@@ -57,12 +57,13 @@ namespace ListsOptionsUI.ViewModels
 
         private async Task LoadReservations()
         {
-            if (SelectedHotel == null) return;
+
             var latestHotels = _hotelService.GetAllHotels();
             if (HotelsChanged(latestHotels))
             {
                 RefreshHotels();
             }
+            if (SelectedHotel == null) return;
             var allFacilities = facilityService.GetAllFacilities().ToDictionary(f => f.Id, f => f.Name);
             var reservations = await _reservationService.GetReservationsByHotelAsync(SelectedHotel?.Id ?? 0);
 

@@ -12,6 +12,7 @@ namespace ListsOptionsUI.ViewModels
         }
 
         public UserModel? CurrentUser => UserSessionService.Instance.CurrentUser;
+        public int? CurrentHotel => UserSessionService.Instance.CurrentUser.HotelId;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

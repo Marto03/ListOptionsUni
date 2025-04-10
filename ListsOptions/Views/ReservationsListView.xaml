@@ -45,7 +45,7 @@
                 <DataGridTextColumn Binding="{Binding User.UserName}" Header="Потребител" />
 
                 <!--  Начин на плащане  -->
-                <DataGridTextColumn Binding="{Binding PaymentMethod.Name}" Header="Плащане" />
+                <DataGridTextColumn Binding="{Binding Payment.PaymentMethod.Name}" Header="Плащане" />
 
                 <!--  Тип стая  -->
                 <DataGridTextColumn Binding="{Binding RoomType}" Header="Тип стая" />

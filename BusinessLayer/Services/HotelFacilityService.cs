@@ -55,7 +55,7 @@ namespace BusinessLayer.Services
         public void SaveFacilitiesForHotel(int hotelId, List<HotelFacilityDTO> facilityDtos)
         {
             if (facilityDtos == null || facilityDtos.Any(f => f.FacilityId == null))
-                throw new ArgumentException("Facility ID не може да бъде null.");
+                return;
 
             var newEntities = facilityDtos.Select(dto => new HotelFacilityModel
             {

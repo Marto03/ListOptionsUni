@@ -78,7 +78,7 @@ namespace DataLayer.Models
                 .HasForeignKey(r => r.UserId);
 
             modelBuilder.Entity<ReservationModel>()
-                .HasOne(r => r.PaymentMethod)
+                .HasOne(r => r.Payment)
                 .WithMany() // Много резервации могат да използват един метод на плащане
                 .HasForeignKey(r => r.PaymentId);
 
@@ -86,6 +86,11 @@ namespace DataLayer.Models
             // Конфигуриране на PaymentModel
             modelBuilder.Entity<PaymentModel>()
                 .HasKey(p => p.Id);
+
+            modelBuilder.Entity<PaymentModel>()
+                .HasOne(p => p.PaymentMethod)
+                .WithMany()
+                .HasForeignKey(p => p.PaymentMethodId);
 
             // Конфигуриране на HotelFacilityModel
             modelBuilder.Entity<HotelFacilityModel>()

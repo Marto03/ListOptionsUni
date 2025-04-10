@@ -34,7 +34,7 @@ namespace DataLayer.Services
 
             if (existingFacility != null)
             {
-                _context.Remove(facility);
+                _context.Remove(facility); //
                 _context.SaveChanges();
             }
         }

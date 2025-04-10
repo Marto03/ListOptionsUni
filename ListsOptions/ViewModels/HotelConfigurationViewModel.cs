@@ -98,13 +98,20 @@ namespace ListsOptionsUI.ViewModels
 
         private async Task SaveHotelSelectionAsync()
         {
-            if (SelectedHotel != null && CurrentUser != null)
+            try
             {
-                CurrentUser.HotelId = SelectedHotel.Id;
-                await _userService.UpdateUserHotelAsync(CurrentUser);
+                if (SelectedHotel != null && CurrentUser != null)
+                {
+                    CurrentUser.HotelId = SelectedHotel.Id;
+                    await _userService.UpdateUserHotelAsync(CurrentUser);
 
-                Events.AppEvents.RaiseUsersChanged();
-                //OnPropertyChanged(nameof(App.ServiceProvider.GetRequiredService<UserDetailsViewModel>().Users));
+                    Events.AppEvents.RaiseUsersChanged();
+                    //OnPropertyChanged(nameof(App.ServiceProvider.GetRequiredService<UserDetailsViewModel>().Users));
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Възникна грешка", MessageBoxButton.OK);
             }
         }
 
@@ -122,6 +129,10 @@ namespace ListsOptionsUI.ViewModels
             catch(InvalidOperationException e)
             {
                 MessageBox.Show(e.Message, "Грешен хотел", MessageBoxButton.OK);
+            }
+            finally
+            {
+                NewHotelName = null;
             }
         }
     }

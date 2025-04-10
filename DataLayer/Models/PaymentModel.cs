@@ -9,6 +9,6 @@
         public int PaymentMethodId { get; set; }  // FK към метода на плащане
         public int HotelId { get; set; }
 
-        //public PaymentMethodModel PaymentMethod { get; set; }  // Навигационно свойство
+        public virtual PaymentMethodModel PaymentMethod { get; set; }  // Навигационно свойство
     }
 }

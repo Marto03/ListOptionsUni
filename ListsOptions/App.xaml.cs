@@ -38,7 +38,6 @@ public partial class App : Application
         // Регистрираме Service слоя
         services.AddScoped<HotelService>();
         services.AddScoped<ReservationService>();
-        services.AddScoped<PaymentService>();
 
         // Регистриране на ViewModel-и
         services.AddScoped<FacilityViewModel>();

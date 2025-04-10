@@ -33,13 +33,13 @@ namespace DataLayer.Models
         public int PaymentId { get; set; }
 
         // Добавяне на навигационни свойства:
-        public virtual HotelModel Hotel { get; set; }  // Свързано с Hotel
-        public virtual UserModel User { get; set; }    // Свързано с User
-        public virtual PaymentMethodModel PaymentMethod { get; set; } // Свързано с PaymentMethod
-        public virtual List<FacilityModel> Facilities { get; set; }  // Свързано с Facilities (може да се използва за изтегляне на детайлите на удобствата)
+        public virtual HotelModel? Hotel { get; set; }  // Свързано с Hotel
+        public virtual UserModel? User { get; set; }    // Свързано с User
+        public virtual PaymentModel? Payment { get; set; } // Свързано с Payment
+        public virtual List<FacilityModel?>? Facilities { get; set; }  // Свързано с Facilities (може да се използва за изтегляне на детайлите на удобствата)
 
         [NotMapped]
-        public string UsedFacilitiesAsString { get; set; }
+        public string? UsedFacilitiesAsString { get; set; }
 
     }
 }

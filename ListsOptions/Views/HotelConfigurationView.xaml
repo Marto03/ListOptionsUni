@@ -32,7 +32,6 @@
                             <MultiBinding Converter="{StaticResource HotelToIsCheckedMultiConverter}" Mode="OneWay">
                                 <!--  SelectedHotel от ViewModel  -->
                                 <Binding Path="DataContext.SelectedHotel" RelativeSource="{RelativeSource AncestorType=UserControl}" />
-                                <!--  Текущият хотел  -->
                                 <Binding />
                             </MultiBinding>
                         </RadioButton.IsChecked>

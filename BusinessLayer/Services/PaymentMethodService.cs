@@ -21,6 +21,7 @@ namespace DataLayer.Services
 
             // Ако няма такъв начин на плащане , го запазваме като потребителско добавено (Name)
             var amenity = new PaymentMethodModel { Name = name };
+            //_context.PaymentMethods.Add(amenity);
             _context.Add(amenity);
             _context.SaveChanges();
         }

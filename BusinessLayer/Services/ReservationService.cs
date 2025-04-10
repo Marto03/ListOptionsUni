@@ -11,7 +11,7 @@ namespace BusinessLayer.Services
         {
             var totalPrice = await CalculateTotalPriceAsync(reservation.HotelId, reservation.UsedFacilities, reservation.RoomType, Math.Max(1, (int)(reservation.CheckOutDate - reservation.CheckInDate).TotalDays));
 
-            // Създай PaymentModel
+            // Създаваме PaymentModel
             var payment = new PaymentModel
             {
                 Amount = totalPrice,
@@ -21,6 +21,13 @@ namespace BusinessLayer.Services
 
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
+
+            var hotelExists = await _context.Hotels.AnyAsync(h => h.Id == reservation.HotelId);
+            var userExists = await _context.Users.AnyAsync(u => u.Id == reservation.UserId);
+            var paymentExists = await _context.Payments.AnyAsync(p => p.Id == reservation.PaymentId);
+            var facilitiesExist = await _context.Facilities
+                .Where(f => reservation.UsedFacilities.Contains(f.Id))
+                .CountAsync() == reservation.UsedFacilities.Count;
 
             var dbReservation = new ReservationModel
             {
@@ -84,7 +91,7 @@ namespace BusinessLayer.Services
                                               .Include(r => r.Hotel)               // Зареждаме информацията за хотела
                                               .Include(r => r.User)                // Зареждаме информацията за потребителя
                                               .Include(r => r.Facilities)          // Зареждаме свързаните удобства
-                                              .Include(r => r.PaymentMethod)       // Зареждаме информацията за метода на плащане
+                                              .Include(r => r.Payment)       // Зареждаме информацията за метода на плащане
                                               .ToListAsync();
             return reservations;
         }
