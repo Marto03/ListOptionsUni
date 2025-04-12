@@ -1,10 +1,8 @@
-﻿using BusinessLayer.Services;
-using Common;
-using Common.CustomExceptions;
-using DataLayer.Models;
-using ListsOptions;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Common.CustomExceptions;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
 using ListsOptionsUI.Commands;
-using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -14,7 +12,7 @@ namespace ListsOptionsUI.ViewModels
     public class UserDetailsViewModel : BaseViewModel
     {
         #region fields
-        private readonly UserService userService;
+        private readonly IUserService userService;
         private UserModel selectedUser;
         private UserModel newUser;
         private bool isExpanderOpen;
@@ -24,7 +22,8 @@ namespace ListsOptionsUI.ViewModels
                                     CurrentUser?.Type == UserTypeEnum.Admin;
         #endregion
         #region Constructor
-        public UserDetailsViewModel(UserService userService)
+        public UserDetailsViewModel(IUserService userService, IUserSessionService userSessionService)
+            : base(userSessionService)
         {
             this.userService = userService;
             UserTypes = new ObservableCollection<UserTypeEnum>((UserTypeEnum[])Enum.GetValues(typeof(UserTypeEnum)));

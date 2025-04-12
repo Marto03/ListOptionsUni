@@ -1,6 +1,6 @@
-﻿using BusinessLayer.Services;
-using DataLayer.Models;
-using DataLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
 using ListsOptions;
 using ListsOptionsUI.Commands;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,17 +13,17 @@ namespace ListsOptionsUI.ViewModels
     public class FacilityViewModel : BaseViewModel
     {
         #region fields
-        private readonly FacilityService facilityService;
+        private readonly IFacilityService facilityService;
         private string newFacilityName;
         #endregion
         #region Constructor
-        public FacilityViewModel(FacilityService facilityService)
+        public FacilityViewModel(IFacilityService facilityService, IUserSessionService userSessionService) : base (userSessionService)
         {
             this.facilityService = facilityService;
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
             DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => _ is FacilityModel selectedFacilityModel && selectedFacilityModel?.IsCustomAdded == true && CurrentUser?.Type == UserTypeEnum.Admin);
-            HotelFacilityEditorViewModel = new HotelFacilityEditorViewModel(App.ServiceProvider.GetRequiredService<HotelFacilityService>(), facilityService);
+            HotelFacilityEditorViewModel = new HotelFacilityEditorViewModel(App.ServiceProvider.GetRequiredService<IHotelFacilityService>(), facilityService , userSessionService);
         }
         #endregion
         #region Properties

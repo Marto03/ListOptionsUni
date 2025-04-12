@@ -1,9 +1,9 @@
-﻿using BusinessLayer.Services;
-using Common.DTOs;
-using DataLayer.Models;
-using DataLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.DTOs;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
+using ListsOptions;
 using ListsOptionsUI.Commands;
-using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -11,23 +11,25 @@ namespace ListsOptionsUI.ViewModels
 {
     public class HotelFacilityEditorViewModel : BaseViewModel
     {
-        private readonly HotelFacilityService _facilityService;
-        private readonly FacilityService _facilityListService;
+        private readonly IHotelFacilityService _facilityService;
+        private readonly IFacilityService _facilityListService;
 
 
-        public HotelFacilityEditorViewModel(HotelFacilityService service, FacilityService facilityListService)
+        public HotelFacilityEditorViewModel(IHotelFacilityService service, IFacilityService facilityListService, IUserSessionService userSessionService) : base(userSessionService)
         {
             _facilityService = service;
             _facilityListService = facilityListService;
-
+            HotelListByFacility = new HotelListByFacilityViewModel(service,facilityListService);
             AddFacilityCommand = new RelayCommand(AddFacility, _ => CanSave && CurrentHotel != null);
             RemoveFacilityCommand = new RelayCommand<HotelFacilityDTO>(RemoveFacility);
             SaveCommand = new RelayCommand(SaveFacilities, _ => CanSave && CurrentHotel != null);
 
             LoadFacilities();
-            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+            userSessionService.CurrentUserChanged += OnCurrentUserChanged;
             Events.AppEvents.UsersChanged += () => LoadFacilities();
         }
+
+        public HotelListByFacilityViewModel HotelListByFacility { get; set; }
 
         public ObservableCollection<FacilityModel> AvailableFacilities { get; set; } = new();
         public ObservableCollection<HotelFacilityDTO> FacilityList { get; set; } = new();

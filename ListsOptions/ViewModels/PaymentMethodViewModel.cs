@@ -1,5 +1,7 @@
-﻿using DataLayer.Models;
-using DataLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
+using ListsOptions;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -10,11 +12,11 @@ namespace ListsOptionsUI.ViewModels
     public class PaymentMethodViewModel : BaseViewModel
     {
         #region fields
-        private readonly PaymentMethodService paymentMethodService;
+        private readonly IPaymentMethodService paymentMethodService;
         private string newPaymentMethod;
         #endregion
         #region Constructor
-        public PaymentMethodViewModel(PaymentMethodService paymentMethodService)
+        public PaymentMethodViewModel(IPaymentMethodService paymentMethodService, IUserSessionService userSessionService) : base(userSessionService)
         {
             this.paymentMethodService = paymentMethodService;
             PaymentMethods = new ObservableCollection<PaymentMethodModel>(this.paymentMethodService.GetPaymentMethods());

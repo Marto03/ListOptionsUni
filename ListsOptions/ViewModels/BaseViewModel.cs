@@ -1,22 +1,28 @@
-﻿using BusinessLayer.Services;
-using DataLayer.Models;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
 using System.ComponentModel;
 
 namespace ListsOptionsUI.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public BaseViewModel()
+        private readonly IUserSessionService _userSessionService;
+
+        // Инжектиране на зависимостта чрез конструктор
+        public BaseViewModel(IUserSessionService userSessionService)
         {
-            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+            _userSessionService = userSessionService;
+            _userSessionService.CurrentUserChanged += OnCurrentUserChanged;
         }
 
-        public UserModel? CurrentUser => UserSessionService.Instance.CurrentUser;
-        public int? CurrentHotel => UserSessionService.Instance.CurrentUser.HotelId;
+        public UserModel? CurrentUser => _userSessionService.CurrentUser;
+        public int? CurrentHotel => _userSessionService.CurrentUser?.HotelId;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
         internal bool CanSave => CurrentUser?.Type == UserTypeEnum.Admin;
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

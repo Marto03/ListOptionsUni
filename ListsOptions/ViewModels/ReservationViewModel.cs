@@ -1,7 +1,7 @@
-﻿using BusinessLayer.Services;
-using Common.DTOs;
-using DataLayer.Models;
-using DataLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.DTOs;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -11,9 +11,9 @@ namespace ListsOptionsUI.ViewModels
 {
     public class ReservationViewModel : BaseViewModel
     {
-        private readonly ReservationService _reservationService;
-        private readonly HotelFacilityService _hotelFacilityService;
-        private readonly PaymentMethodService _paymentMethodService;
+        private readonly IReservationService _reservationService;
+        private readonly IHotelFacilityService _hotelFacilityService;
+        private readonly IPaymentMethodService _paymentMethodService;
         private RoomTypeEnum _selectedRoomType;
         private PaymentMethodModel _selectedPaymentMethod;
         private DateTime _checkInDate = DateTime.Today;
@@ -23,7 +23,8 @@ namespace ListsOptionsUI.ViewModels
         private ObservableCollection<PaymentMethodModel> _previousPaymentMethods;
         private bool CanAddReservation => SelectedPaymentMethod != null && CheckOutDate > CheckInDate && CurrentUser?.HotelId != null;
 
-        public ReservationViewModel(ReservationService reservationService, HotelFacilityService hotelFacilityService, PaymentMethodService paymentMethodService)
+        public ReservationViewModel(IReservationService reservationService, IHotelFacilityService hotelFacilityService, IPaymentMethodService paymentMethodService, IUserSessionService userSessionService)
+            : base (userSessionService)
         {
             _reservationService = reservationService;
             _hotelFacilityService = hotelFacilityService;

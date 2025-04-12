@@ -9,7 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.3" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseConfig\DatabaseConfig.csproj" />
+    <ProjectReference Include="..\HotelApp.Common\HotelApp.Common.csproj" />
+    <ProjectReference Include="..\HotelApp.Core\HotelApp.Core.csproj" />
+  </ItemGroup>
+	
 
 </Project>

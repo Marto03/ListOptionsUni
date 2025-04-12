@@ -4,14 +4,14 @@
     "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\ListsOptions\\ListsOptionsUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\DatabaseConfig.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\BusinessLayer.csproj",
-        "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\DatabaseConfig.csproj",
+        "projectName": "DatabaseConfig",
+        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\DatabaseConfig.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj"
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\HotelApp.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\HotelApp.BusinessLayer.csproj"
               },
-              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\HotelApp.Data.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\HotelApp.Data.csproj"
               }
             }
           }
@@ -57,8 +57,147 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\HotelApp.BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\HotelApp.BusinessLayer.csproj",
+        "projectName": "HotelApp.BusinessLayer",
+        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\HotelApp.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj"
+              },
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj",
+        "projectName": "HotelApp.Common",
+        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[9.0.3, )"
             }
@@ -83,14 +222,14 @@
         }
       }
     },
-    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj": {
+    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj",
-        "projectName": "Common",
-        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj",
+        "projectName": "HotelApp.Core",
+        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -149,14 +288,14 @@
         }
       }
     },
-    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\HotelApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\DataLayer.csproj",
-        "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\HotelApp.Data.csproj",
+        "projectName": "HotelApp.Data",
+        "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\HotelApp.Data.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +317,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\Common\\Common.csproj"
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj"
+              },
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj"
               }
             }
           }
@@ -200,10 +342,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "BCrypt.Net-Next": {
-              "target": "Package",
-              "version": "[4.0.3, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.3, )"
@@ -268,8 +406,14 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\DatabaseConfig.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\DatabaseConfig\\DatabaseConfig.csproj"
+              },
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Common\\HotelApp.Common.csproj"
+              },
+              "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj": {
+                "projectPath": "C:\\Users\\marti\\Desktop\\Uni\\ПС\\ListsOptions\\HotelApp.Core\\HotelApp.Core.csproj"
               }
             }
           }
@@ -289,6 +433,20 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

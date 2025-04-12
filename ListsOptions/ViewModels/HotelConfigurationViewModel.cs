@@ -1,5 +1,6 @@
-﻿using BusinessLayer.Services;
-using DataLayer.Models;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
 using ListsOptions;
 using ListsOptionsUI.Commands;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,16 +12,16 @@ namespace ListsOptionsUI.ViewModels
 {
     public class HotelConfigurationViewModel : BaseViewModel
     {
-        private readonly HotelService _hotelService;
-        private readonly UserService _userService;
+        private readonly IHotelService _hotelService;
+        private readonly IUserService _userService;
         private string newHotelName;
         private HotelModel? _selectedHotel;
 
         private bool CanSave => CurrentUser?.Type == UserTypeEnum.Admin;
-        public HotelConfigurationViewModel()
+        public HotelConfigurationViewModel(IUserSessionService userSessionService) : base (userSessionService)
         {
-            _hotelService = App.ServiceProvider.GetRequiredService<HotelService>();
-            _userService = App.ServiceProvider.GetRequiredService<UserService>();
+            _hotelService = App.ServiceProvider.GetRequiredService<IHotelService>();
+            _userService = App.ServiceProvider.GetRequiredService<IUserService>();
 
             SaveHotelCommand = new RelayCommand(async _ => await SaveHotelSelectionAsync(), _ => CanSave);
             AddHotelCommand = new RelayCommand(AddNewHotel , _ => CanSave);
@@ -28,7 +29,7 @@ namespace ListsOptionsUI.ViewModels
 
             LoadHotels();
 
-            UserSessionService.Instance.CurrentUserChanged += OnCurrentUserChanged;
+            userSessionService.CurrentUserChanged += OnCurrentUserChanged;
         }
         public ObservableCollection<HotelModel> Hotels { get; set; } = new();
 

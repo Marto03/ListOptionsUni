@@ -1,5 +1,4 @@
-﻿using DataLayer.Models;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Windows.Data;
 
 namespace ListsOptionsUI.Converters

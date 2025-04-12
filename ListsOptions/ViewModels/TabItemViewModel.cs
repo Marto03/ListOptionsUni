@@ -1,4 +1,5 @@
-﻿using ListsOptionsUI.Commands;
+﻿using HotelApp.Core.Interfaces;
+using ListsOptionsUI.Commands;
 using System.Windows.Input;
 
 namespace ListsOptionsUI.ViewModels
@@ -10,7 +11,8 @@ namespace ListsOptionsUI.ViewModels
         private readonly Action<TabItemViewModel> closeAction;
         #endregion
         #region Constructor
-        public TabItemViewModel(string title, object view, Action<TabItemViewModel> closeAction, Action<TabItemViewModel> selectAction)
+        public TabItemViewModel(string title, object view, Action<TabItemViewModel> closeAction, Action<TabItemViewModel> selectAction, IUserSessionService userSessionService)
+            : base (userSessionService)
         {
             Title = title;
             View = view;

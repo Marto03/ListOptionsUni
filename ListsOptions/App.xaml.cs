@@ -1,12 +1,15 @@
-﻿using BusinessLayer.Services;
-using DataLayer.Models;
-using DataLayer.Repositories;
-using DataLayer.Services;
+﻿using DatabaseConfig;
+using HotelApp.BusinessLayer.Services;
+using HotelApp.Common.ServiceConfiguration;
 using ListsOptionsUI.ViewModels;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using System.Reflection;
+using System.Runtime.Loader;
 using System.Windows;
-
+using Microsoft.Extensions.Hosting;
+using System.Runtime.InteropServices.JavaScript;
+using HotelApp.Data.Repositories;
 namespace ListsOptions;
 
 /// <summary>
@@ -14,47 +17,37 @@ namespace ListsOptions;
 /// </summary>
 public partial class App : Application
 {
+    private readonly IHost _host;
     public App()
     {
         ServiceCollection services = new ServiceCollection();
+        _host = Host.CreateDefaultBuilder()
+            .ConfigureServices((context, services) =>
+            {
+                services.AddBusinessLayer("Data Source=hotel.db");
+                // Регистрация на ViewModel-и
+                services.AddScoped<BaseViewModel>();
+                services.AddScoped<FacilityViewModel>();
+                services.AddScoped<PaymentMethodViewModel>();
+                services.AddScoped<RoomTypeViewModel>();
+                services.AddScoped<UserViewModel>();
+                services.AddScoped<UserDetailsViewModel>();
+                services.AddScoped<MainViewModel>();
 
-        // Добавяне на DbContext (Базата данни)
-        services.AddDbContext<HotelDbContextModel>(options =>
-            options.UseSqlite("Data Source=hotel.db"));
+                services.AddScoped<HotelConfigurationViewModel>();
+                services.AddScoped<HotelFacilityEditorViewModel>();
+                services.AddScoped<ReservationViewModel>();
+                services.AddScoped<ReservationsListViewModel>();
+                services.AddScoped<HotelListByFacilityViewModel>();
+                services.AddScoped<MainWindow>();
 
-        // Регистриране на сървиси от BusinessLayer
-        services.AddScoped<FacilityService>();
-        services.AddScoped<PaymentMethodService>();
-        services.AddScoped<RoomTypeService>();
-        services.AddScoped<UserService>();
 
-        services.AddScoped<HotelFacilityService>();
 
-        // Регистрираме Repository слоя
-        services.AddScoped<IHotelRepository, HotelRepository>();
-        //services.AddScoped<IReservationRepository, ReservationRepository>();
-        //services.AddScoped<IPaymentRepository, PaymentRepository>();
+            })
+            .Build();
 
-        // Регистрираме Service слоя
-        services.AddScoped<HotelService>();
-        services.AddScoped<ReservationService>();
-
-        // Регистриране на ViewModel-и
-        services.AddScoped<FacilityViewModel>();
-        services.AddScoped<PaymentMethodViewModel>();
-        services.AddScoped<RoomTypeViewModel>();
-        services.AddScoped<UserViewModel>();
-        services.AddScoped<UserDetailsViewModel>();
-        services.AddScoped<MainViewModel>();
-
-        services.AddScoped<HotelConfigurationViewModel>();
-        services.AddScoped<HotelFacilityEditorViewModel>();
-        services.AddScoped<ReservationViewModel>();
-        services.AddScoped<ReservationsListViewModel>();
-        //services.AddScoped<PaymentMethodViewModel>();
-        services.AddScoped<MainWindow>();
-
-        ServiceProvider = services.BuildServiceProvider();
+        // Записване на глобалния контейнер
+        ServiceProvider = _host.Services;
     }
     public static IServiceProvider ServiceProvider { get; private set; }
 

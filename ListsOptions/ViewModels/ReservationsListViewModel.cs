@@ -1,7 +1,9 @@
-﻿using BusinessLayer.Services;
-using DataLayer.Models;
-using DataLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
+using HotelApp.Core.Models;
+using ListsOptions;
 using ListsOptionsUI.Commands;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -9,13 +11,13 @@ namespace ListsOptionsUI.ViewModels
 {
     public class ReservationsListViewModel : BaseViewModel
     {
-        private readonly ReservationService _reservationService;
-        private readonly HotelService _hotelService;
+        private readonly IReservationService _reservationService;
+        private readonly IHotelService _hotelService;
         private ObservableCollection<ReservationModel> _reservations;
-        private readonly FacilityService facilityService;
+        private readonly IFacilityService facilityService;
         private HotelModel _selectedHotel;
-
-        public ReservationsListViewModel(ReservationService reservationService, HotelService hotelService, FacilityService facilityService)
+        public ReservationsListViewModel(IReservationService reservationService, IHotelService hotelService, IFacilityService facilityService, IUserSessionService userSessionService)
+            : base(userSessionService)
         {
             _reservationService = reservationService;
             _hotelService = hotelService;

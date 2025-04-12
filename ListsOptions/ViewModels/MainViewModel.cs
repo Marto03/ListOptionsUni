@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Services;
+﻿using HotelApp.Core.Interfaces;
 using ListsOptions;
 using ListsOptionsUI.Commands;
 using ListsOptionsUI.Views;
@@ -16,9 +16,10 @@ namespace ListsOptionsUI.ViewModels
         #endregion
         #region Constructor
         public MainViewModel(FacilityViewModel facilityViewModel, PaymentMethodViewModel paymentMethodViewModel, 
-            RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel)
+            RoomTypeViewModel roomTypeViewModel, UserDetailsViewModel userDetailsViewModel, UserViewModel userViewModel, IUserSessionService userSessionService)
+            : base(userSessionService)
         {
-            OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel)));
+            OpenFacilityCommand = new RelayCommand(o => OpenTab("Хотелски удобства", new FacilityView(facilityViewModel), userSessionService));
 
             //OpenFacilityCommand = new RelayCommand(o =>
             //{
@@ -30,12 +31,12 @@ namespace ListsOptionsUI.ViewModels
             // Ако искам да бъде нова инстанция 
             //OpenFacilityCommand = new RelayCommand(o => OpenTab("Facility", new FacilityView(new FacilityViewModel(facilityViewModel.facilityService))));
             
-            OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel)));
-            OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel)));
-            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel)));
-            OpenHotelConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на хотели", new HotelConfigurationView(App.ServiceProvider.GetRequiredService<HotelConfigurationViewModel>())));
-            OpenReservationCreatingCommand = new RelayCommand(o => OpenTab("Създаване на резервация", new ReservationView(App.ServiceProvider.GetRequiredService<ReservationViewModel>())));
-            OpenReservationsListCommand = new RelayCommand(o => OpenTab("Преглед на резервации", new ReservationsListView(App.ServiceProvider.GetRequiredService<ReservationsListViewModel>())));
+            OpenPaymentMethodCommand = new RelayCommand(o => OpenTab("Платежни методи", new PaymentMethodView(paymentMethodViewModel), userSessionService));
+            OpenRoomTypeCommand = new RelayCommand(o => OpenTab("Типове стаи", new RoomTypeView(roomTypeViewModel), userSessionService));
+            OpenUserConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на потребители", new UserDetailsView(userDetailsViewModel), userSessionService));
+            OpenHotelConfigurationCommand = new RelayCommand(o => OpenTab("Конфигурация на хотели", new HotelConfigurationView(App.ServiceProvider.GetRequiredService<HotelConfigurationViewModel>()), userSessionService));
+            OpenReservationCreatingCommand = new RelayCommand(o => OpenTab("Създаване на резервация", new ReservationView(App.ServiceProvider.GetRequiredService<ReservationViewModel>()), userSessionService));
+            OpenReservationsListCommand = new RelayCommand(o => OpenTab("Преглед на резервации", new ReservationsListView(App.ServiceProvider.GetRequiredService<ReservationsListViewModel>()), userSessionService));
             this.userViewModel = userViewModel;
         }
         #endregion
@@ -66,7 +67,7 @@ namespace ListsOptionsUI.ViewModels
         }
         #endregion
         #region Methods
-        private void OpenTab(string title, object view)
+        private void OpenTab(string title, object view, IUserSessionService userSessionService)
         {
             var existingTab = OpenTabs.FirstOrDefault(t => t.Title == title);
             if (existingTab != null)
@@ -75,7 +76,7 @@ namespace ListsOptionsUI.ViewModels
                 return;
             }
 
-            var newTab = new TabItemViewModel(title, view, CloseTab, SelectTab);
+            var newTab = new TabItemViewModel(title, view, CloseTab, SelectTab, userSessionService);
             OpenTabs.Add(newTab);
 
             SelectTab(newTab);

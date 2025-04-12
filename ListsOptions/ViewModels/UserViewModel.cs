@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Services;
+﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.Core.Interfaces;
 using ListsOptionsUI.Commands;
 using ListsOptionsUI.ViewModels;
 using System.Windows;
@@ -7,12 +8,13 @@ using System.Windows.Input;
 public class UserViewModel : BaseViewModel
 {
     #region fields
-    private readonly UserService userService;
+    private readonly IUserService userService;
     private string username;
     private string password;
     #endregion
     #region Constructor
-    public UserViewModel(UserService userService)
+    public UserViewModel(IUserService userService, IUserSessionService userSessionService)
+        : base (userSessionService)
     {
         this.userService = userService;
         LoginCommand = new RelayCommand(async _ => await ExecuteLogin());
