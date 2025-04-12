@@ -101,7 +101,7 @@ namespace HotelApp.BusinessLayer.Services
         public List<HotelModel> GetHotelsByFacilityId(int facilityId)
         {
             // понеже нямам навигационно свойство Hotel в HotelFacilityModel
-            var hotelIds = _hotelFacilityRepository.GetAll().Where(hf => hf.FacilityId == facilityId).Select(hf=>hf.FacilityId).Distinct().ToList();
+            var hotelIds = _hotelFacilityRepository.GetAll().Where(hf => hf.FacilityId == facilityId).Select(hf=>hf.HotelId).Distinct().ToList();
             return _hotelRepository.GetAll()
                 .Where(h => hotelIds.Contains(h.Id))
                 .ToList();

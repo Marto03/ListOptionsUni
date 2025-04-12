@@ -18,6 +18,7 @@ namespace ListsOptionsUI.ViewModels
             this.facilityService = facilityService; 
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             LoadFacilities();
+            SelectedFacility = Facilities.FirstOrDefault();
 
             ShowHotelsCommand = new RelayCommand(ShowHotelsWithFacility, _ => SelectedFacility != null);
 
