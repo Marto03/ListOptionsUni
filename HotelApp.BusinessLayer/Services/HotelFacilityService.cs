@@ -83,7 +83,9 @@ namespace HotelApp.BusinessLayer.Services
                 HotelId = hotelId,
                 FacilityId = dto.FacilityId,
                 Price = dto.Price,
-                DiscountPercentage = dto.Discount ?? 0
+                DiscountPercentage = dto.Discount ?? 0,
+                FromDate = dto.FromDate,
+                ToDate = dto.ToDate
             }).ToList();
 
             ReplaceFacilitiesForHotel(hotelId, newEntities);

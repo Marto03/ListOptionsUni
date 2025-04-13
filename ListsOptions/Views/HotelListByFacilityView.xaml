@@ -26,7 +26,10 @@
             Command="{Binding ShowHotelsCommand}"
             Content="Покажи хотелите с това удобство" />
 
-        <ListBox Grid.Row="2" ItemsSource="{Binding HotelsWithSelectedFacility}">
+        <ListBox
+            Grid.Row="2"
+            MaxHeight="100"
+            ItemsSource="{Binding HotelsWithSelectedFacility}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Name}" />

@@ -12,6 +12,10 @@
 
         // Може да бъде null, ако няма отстъпка
         public double? DiscountPercentage { get; set; }
+
+        // Нови свойства:
+        public DateTime? FromDate { get; set; }
+        public DateTime? ToDate { get; set; }
     }
 
 }

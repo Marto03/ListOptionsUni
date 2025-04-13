@@ -68,6 +68,7 @@ namespace HotelApp.BusinessLayer.Services
             {
                 var hotelFacilities = await _hotelFacilityRepository.GetAllAsync();
                 var hotelFacility = hotelFacilities.FirstOrDefault(hf => hf.HotelId == hotelId && hf.FacilityId == facilityId);
+                var currentDate = DateTime.Now;
 
                 if (hotelFacility != null)
                 {
@@ -75,7 +76,11 @@ namespace HotelApp.BusinessLayer.Services
 
                     if (hotelFacility.DiscountPercentage.HasValue)
                     {
-                        facilityPrice -= facilityPrice * (decimal)(hotelFacility.DiscountPercentage.Value / 100.0);
+                        bool hasDateRange = hotelFacility.FromDate.HasValue && hotelFacility.ToDate.HasValue;
+
+                        bool isInDateRange = hasDateRange && currentDate >= hotelFacility.FromDate.Value && currentDate <= hotelFacility.ToDate.Value;
+                        if(!hasDateRange || isInDateRange)
+                            facilityPrice -= facilityPrice * (decimal)(hotelFacility.DiscountPercentage.Value / 100.0);
                     }
 
                     totalPrice += facilityPrice;

@@ -8,14 +8,6 @@ namespace HotelApp.Data.Repositories
 {
     internal class DatabaseContext : DbContext
     {
-        public DbSet<FacilityModel> Facilities { get; set; }
-        public DbSet<PaymentMethodModel> PaymentMethods { get; set; }
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<HotelModel> Hotels { get; set; }
-        public DbSet<ReservationModel> Reservations { get; set; }
-        public DbSet<PaymentModel> Payments { get; set; }
-        public DbSet<HotelFacilityModel> HotelFacilities { get; set; }
-
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
         {
@@ -32,7 +24,7 @@ namespace HotelApp.Data.Repositories
 
             // Конфигуриране на PaymentMethodModel
             modelBuilder.Entity<PaymentMethodModel>()
-                .HasKey(p => p.Id);
+                    .HasKey(p => p.Id);
 
             modelBuilder.Entity<PaymentMethodModel>()
                 .Property(p => p.Type)
@@ -108,7 +100,7 @@ namespace HotelApp.Data.Repositories
             );
             // Вмъкване на системни хотелски удобства
             modelBuilder.Entity<FacilityModel>().HasData(
-                new FacilityModel { Id = 1, Type = FacilityTypeEnum.Pool , Name = FacilityTypeEnum.Pool.ToString() },
+                new FacilityModel { Id = 1, Type = FacilityTypeEnum.Pool, Name = FacilityTypeEnum.Pool.ToString() },
                 new FacilityModel { Id = 2, Type = FacilityTypeEnum.Gym, Name = FacilityTypeEnum.Gym.ToString() },
                 new FacilityModel { Id = 3, Type = FacilityTypeEnum.Spa, Name = FacilityTypeEnum.Spa.ToString() }
             );

@@ -1,8 +1,6 @@
-﻿using HotelApp.BusinessLayer.Services;
-using HotelApp.Core.DTOs;
+﻿using HotelApp.Core.DTOs;
 using HotelApp.Core.Interfaces;
 using HotelApp.Core.Models;
-using ListsOptions;
 using ListsOptionsUI.Commands;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -13,7 +11,9 @@ namespace ListsOptionsUI.ViewModels
     {
         private readonly IHotelFacilityService _facilityService;
         private readonly IFacilityService _facilityListService;
-
+        private DateTime? fromDate = DateTime.Today;
+        private DateTime? toDate = DateTime.Today.AddDays(1);
+        private bool useDateRange;
 
         public HotelFacilityEditorViewModel(IHotelFacilityService service, IFacilityService facilityListService, IUserSessionService userSessionService) : base(userSessionService)
         {
@@ -27,6 +27,44 @@ namespace ListsOptionsUI.ViewModels
             LoadFacilities();
             userSessionService.CurrentUserChanged += OnCurrentUserChanged;
             Events.AppEvents.UsersChanged += () => LoadFacilities();
+        }
+
+        public DateTime? FromDate
+        {
+            get
+            {
+                return fromDate;
+            }
+            set
+            {
+                if (fromDate != value)
+                    fromDate = value;
+                OnPropertyChanged(nameof(FromDate));
+            }
+        }
+        public DateTime? ToDate
+        {
+            get
+            {
+                return toDate;
+            }
+            set
+            {
+                if (toDate != value)
+                    toDate = value;
+
+                OnPropertyChanged(nameof(ToDate));
+            }
+        }
+        public bool UseDateRange
+        {
+            get => useDateRange;
+            set
+            {
+                if (useDateRange != value)
+                    useDateRange = value;
+                OnPropertyChanged(nameof(UseDateRange));
+            }
         }
 
         public HotelListByFacilityViewModel HotelListByFacility { get; set; }
@@ -65,14 +103,16 @@ namespace ListsOptionsUI.ViewModels
 
         private void AddFacility(object o)
         {
-            if (SelectedFacility == null || FacilityList.Any(r=>r.FacilityId == SelectedFacility.Id) || NewPrice == 0) return;
+            if (SelectedFacility == null || FacilityList.Any(r => r.FacilityId == SelectedFacility.Id) || NewPrice == 0) return;
 
             FacilityList.Add(new HotelFacilityDTO
             {
                 FacilityId = SelectedFacility.Id,
                 FacilityName = SelectedFacility.Name,
                 Price = NewPrice,
-                Discount = NewDiscount
+                Discount = NewDiscount,
+                FromDate = UseDateRange ? FromDate : null,
+                ToDate = UseDateRange ? ToDate : null
             });
 
             // Clear input
