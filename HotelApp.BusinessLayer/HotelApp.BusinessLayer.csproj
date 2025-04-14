@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\HotelApp.Common\HotelApp.Common.csproj" />
     <ProjectReference Include="..\HotelApp.Core\HotelApp.Core.csproj" />
   </ItemGroup>

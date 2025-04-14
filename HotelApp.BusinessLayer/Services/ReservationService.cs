@@ -34,14 +34,6 @@ namespace HotelApp.BusinessLayer.Services
             // Използваме репозитория за добавяне на плащането
             await _paymentRepository.AddAsync(payment);
 
-            //// Проверяваме дали хотелът, потребителят и плащането съществуват
-            //var hotelExists = await _context.Hotels.AnyAsync(h => h.Id == reservation.HotelId);
-            //var userExists = await _context.Users.AnyAsync(u => u.Id == reservation.UserId);
-            //var paymentExists = await _context.Payments.AnyAsync(p => p.Id == reservation.PaymentId);
-            //var facilitiesExist = await _context.Facilities
-            //    .Where(f => reservation.UsedFacilities.Contains(f.Id))
-            //    .CountAsync() == reservation.UsedFacilities.Count;
-
             // Създаваме новата резервация
             var dbReservation = new ReservationModel
             {

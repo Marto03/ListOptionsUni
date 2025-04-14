@@ -1,5 +1,4 @@
-﻿using HotelApp.BusinessLayer.Services;
-using HotelApp.Core.DTOs;
+﻿using HotelApp.Core.DTOs;
 using HotelApp.Core.Interfaces;
 using HotelApp.Core.Models;
 using ListsOptionsUI.Commands;
@@ -20,10 +19,10 @@ namespace ListsOptionsUI.ViewModels
         private DateTime _checkOutDate = DateTime.Today.AddDays(1);
         private decimal _totalPrice;
         private int? _previousHotelId;
-        private ObservableCollection<PaymentMethodModel> _previousPaymentMethods;
         private bool CanAddReservation => SelectedPaymentMethod != null && CheckOutDate > CheckInDate && CurrentUser?.HotelId != null;
 
-        public ReservationViewModel(IReservationService reservationService, IHotelFacilityService hotelFacilityService, IPaymentMethodService paymentMethodService, IUserSessionService userSessionService)
+        public ReservationViewModel(IReservationService reservationService, IHotelFacilityService hotelFacilityService, 
+            IPaymentMethodService paymentMethodService, IUserSessionService userSessionService)
             : base (userSessionService)
         {
             _reservationService = reservationService;
@@ -34,7 +33,6 @@ namespace ListsOptionsUI.ViewModels
             PaymentMethods = new ObservableCollection<PaymentMethodModel>(_paymentMethodService.GetPaymentMethods());
             AvailableFacilities = new ObservableCollection<HotelFacilityDTO>();
             _previousHotelId = CurrentUser?.HotelId;
-            _previousPaymentMethods = PaymentMethods;
             FacilitySelectionChangedCommand = new RelayCommand(async _ => await Refresh());
 
             SaveReservationCommand = new RelayCommand(async _ => await SaveReservationAsync(), _ => CanAddReservation);
@@ -108,8 +106,6 @@ namespace ListsOptionsUI.ViewModels
 
             try
             {
-                //var s = App.ServiceProvider.GetRequiredService<FacilityService>();
-                //s.GetAllFacilities().Where(r=>r.Id == SelectedFacilities.)
                 var reservation = new ReservationModel
                 {
                     HotelId = CurrentUser.HotelId.Value,

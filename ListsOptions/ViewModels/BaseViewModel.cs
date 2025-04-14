@@ -1,5 +1,4 @@
-﻿using HotelApp.BusinessLayer.Services;
-using HotelApp.Core.Interfaces;
+﻿using HotelApp.Core.Interfaces;
 using HotelApp.Core.Models;
 using System.ComponentModel;
 
@@ -17,7 +16,6 @@ namespace ListsOptionsUI.ViewModels
         }
 
         public UserModel? CurrentUser => _userSessionService.CurrentUser;
-        public int? CurrentHotel => _userSessionService.CurrentUser?.HotelId;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

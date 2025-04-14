@@ -1,15 +1,8 @@
 ﻿using DatabaseConfig;
-using HotelApp.BusinessLayer.Services;
-using HotelApp.Common.ServiceConfiguration;
 using ListsOptionsUI.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-using System.IO;
-using System.Reflection;
-using System.Runtime.Loader;
-using System.Windows;
 using Microsoft.Extensions.Hosting;
-using System.Runtime.InteropServices.JavaScript;
-using HotelApp.Data.Repositories;
+using System.Windows;
 namespace ListsOptions;
 
 /// <summary>

@@ -1,5 +1,7 @@
 ﻿using HotelApp.BusinessLayer.Services;
+using HotelApp.BusinessLayer.ServicesReusability;
 using HotelApp.Core.Interfaces;
+using HotelApp.Core.InterfacesReusability;
 using HotelApp.Core.Repositories;
 using HotelApp.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -9,30 +11,6 @@ namespace DatabaseConfig
 {
     public static class DatabaseConfigure
     {
-        public static void RegisterServices(IServiceCollection services)
-        {
-            //services.AddScoped<IAppConfigurator>();
-            //var serviceProvider = services.BuildServiceProvider();
-            //serviceProvider.GetRequiredService<IAppConfigurator>().Configure(services);
-
-
-            // Добавяне на DbContext (Базата данни)
-            services.AddDbContext<DatabaseContext>(options =>
-                options.UseSqlite("Data Source=hotel.db"));
-
-            // Регистрираме всички имплементации на IAppConfigurator
-            //services.AddScoped<IAppConfigurator, DataConfig>();
-
-            //// Изграждане на service provider
-            //var serviceProvider = services.BuildServiceProvider();
-
-            //// Извличаме всички конфигурации и ги изпълняваме
-            //var configurators = serviceProvider.GetServices<IAppConfigurator>();
-            //foreach (var configurator in configurators)
-            //{
-            //    configurator.Configure(services);
-            //}
-        }
         public static IServiceCollection AddBusinessLayer(this IServiceCollection services, string connectionString)
         {
             services.AddDbContext<DatabaseContext>(options =>
@@ -49,6 +27,7 @@ namespace DatabaseConfig
             services.AddScoped<IHotelService, HotelService>();
             services.AddScoped<IReservationService, ReservationService>();
             services.AddScoped<IHotelFacilityService, HotelFacilityService>();
+            services.AddScoped<ICarRentalService, CarRentalService>();
 
             //services.AddScoped<IHotelFacilityEditorViewModel, HotelFacilityEditorViewModel>();
 

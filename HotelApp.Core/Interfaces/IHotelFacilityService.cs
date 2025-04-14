@@ -12,7 +12,6 @@ namespace HotelApp.Core.Interfaces
 
         List<HotelFacilityDTO> GetFacilitiesForHotel(int? hotelId);
 
-
         void SaveFacilitiesForHotel(int hotelId, List<HotelFacilityDTO> facilityDtos);
 
         void RemoveAllFacilitiesForHotel(int hotelId);

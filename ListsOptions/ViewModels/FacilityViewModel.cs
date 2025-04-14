@@ -1,5 +1,6 @@
 ﻿using HotelApp.BusinessLayer.Services;
 using HotelApp.Core.Interfaces;
+using HotelApp.Core.InterfacesReusability;
 using HotelApp.Core.Models;
 using ListsOptions;
 using ListsOptionsUI.Commands;
@@ -23,7 +24,7 @@ namespace ListsOptionsUI.ViewModels
             Facilities = new ObservableCollection<FacilityModel>(this.facilityService.GetAllFacilities());
             AddFacilityCommand = new RelayCommand(_ => AddFacility(_), _ => CurrentUser?.Type == UserTypeEnum.Admin);
             DeleteFacilityCommand = new RelayCommand(DeleteFacility, _ => _ is FacilityModel selectedFacilityModel && selectedFacilityModel?.IsCustomAdded == true && CurrentUser?.Type == UserTypeEnum.Admin);
-            HotelFacilityEditorViewModel = new HotelFacilityEditorViewModel(App.ServiceProvider.GetRequiredService<IHotelFacilityService>(), facilityService , userSessionService);
+            HotelFacilityEditorViewModel = new HotelFacilityEditorViewModel(App.ServiceProvider.GetRequiredService<IHotelFacilityService>(), facilityService , userSessionService, App.ServiceProvider.GetRequiredService<ICarRentalService>());
         }
         #endregion
         #region Properties

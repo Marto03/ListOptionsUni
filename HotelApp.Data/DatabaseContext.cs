@@ -1,4 +1,5 @@
 ﻿using HotelApp.Core.Models;
+using HotelApp.Core.ModelsReusability;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("DatabaseConfig")]
@@ -90,6 +91,10 @@ namespace HotelApp.Data.Repositories
 
             // Конфигуриране на HotelFacilityModel
             modelBuilder.Entity<HotelFacilityModel>()
+                .HasKey(hf => hf.Id);
+
+            // Конфигуриране на CarRentalModel -> За демонстрация на Reusability 
+            modelBuilder.Entity<CarRentalModel>()
                 .HasKey(hf => hf.Id);
 
             // Вмъкване на системни платежни методи

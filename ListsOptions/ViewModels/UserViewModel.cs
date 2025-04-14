@@ -1,5 +1,4 @@
-﻿using HotelApp.BusinessLayer.Services;
-using HotelApp.Core.Interfaces;
+﻿using HotelApp.Core.Interfaces;
 using ListsOptionsUI.Commands;
 using ListsOptionsUI.ViewModels;
 using System.Windows;
