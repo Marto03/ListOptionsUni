@@ -203,10 +203,10 @@ namespace ListsOptionsUI.ViewModels
                 decimal finalPrice = r.GetFinalPrice(DateTime.Now);
             }
 
-            foreach (var car in CarRentals)
-            {
-                _carRentalService.AddRentalAsync(car); // чрез GenericRepository или специален CarRentalService
-            }
+            //foreach (var car in CarRentals)
+            //{
+            //    _carRentalService.AddRentalAsync(car); // чрез GenericRepository или специален CarRentalService
+            //}
 
             _facilityService.SaveFacilitiesForHotel(CurrentUser?.HotelId ?? 0, FacilityList.ToList());
         }
