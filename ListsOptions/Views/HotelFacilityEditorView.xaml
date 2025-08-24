@@ -85,7 +85,7 @@
 
 
                 <!--  Списък с текущи удобства  -->
-                <ScrollViewer>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
                     <ListBox
                         Grid.Row="1"
                         MaxHeight="200"
@@ -145,50 +145,56 @@
 
             </StackPanel>
         </GroupBox>
-        <GroupBox Grid.Row="1" Header="Автомобили под наем" Margin="0,20,0,0">
+        <GroupBox
+            Grid.Row="1"
+            Margin="0,20,0,0"
+            Header="Автомобили под наем">
             <StackPanel>
 
-                <!-- Полета за нова кола -->
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                <!--  Полета за нова кола  -->
+                <StackPanel Margin="0,5,0,5" Orientation="Horizontal">
                     <TextBox
-                MaxWidth="100"
-                MinWidth="100"
-                Margin="5"
-                helpers:PlaceholderHelper.PlaceholderText="Марка"
-                Text="{Binding NewCarBrand}" />
+                        MinWidth="100"
+                        MaxWidth="100"
+                        Margin="5"
+                        helpers:PlaceholderHelper.PlaceholderText="Марка"
+                        Text="{Binding NewCarBrand}" />
                     <TextBox
-                MaxWidth="100"
-                MinWidth="100"
-                Margin="5"
-                helpers:PlaceholderHelper.PlaceholderText="Модел"
-                Text="{Binding NewCarModel}" />
+                        MinWidth="100"
+                        MaxWidth="100"
+                        Margin="5"
+                        helpers:PlaceholderHelper.PlaceholderText="Модел"
+                        Text="{Binding NewCarModel}" />
                     <Button
-                Width="60"
-                Margin="5"
-                Content="Добави"
-                Command="{Binding AddCarCommand}" />
+                        Width="60"
+                        Margin="5"
+                        Command="{Binding AddCarCommand}"
+                        Content="Добави" />
                 </StackPanel>
 
-                <!-- Списък с коли -->
-                <ListBox ItemsSource="{Binding CarRentals}" MaxHeight="200">
+                <!--  Списък с коли  -->
+                <ListBox MaxHeight="200" ItemsSource="{Binding CarRentals}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border
-                        Padding="8"
-                        BorderBrush="Gray"
-                        BorderThickness="1"
-                        CornerRadius="5"
-                        Margin="2">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{Binding Brand}" FontWeight="Bold" Margin="5" />
-                                    <TextBlock Text=" - " VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding Model}" Margin="5" />
+                                Margin="2"
+                                Padding="8"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                CornerRadius="5">
+                                <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                                    <TextBlock
+                                        Margin="5"
+                                        FontWeight="Bold"
+                                        Text="{Binding Brand}" />
+                                    <TextBlock VerticalAlignment="Center" Text=" - " />
+                                    <TextBlock Margin="5" Text="{Binding Model}" />
                                     <Button
-                                Content="Премахни"
-                                Command="{Binding DataContext.RemoveCarCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                CommandParameter="{Binding}"
-                                HorizontalAlignment="Right"
-                                Margin="10,0,0,0" />
+                                        Margin="10,0,0,0"
+                                        HorizontalAlignment="Right"
+                                        Command="{Binding DataContext.RemoveCarCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        CommandParameter="{Binding}"
+                                        Content="Премахни" />
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

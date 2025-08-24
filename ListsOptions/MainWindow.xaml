@@ -8,7 +8,7 @@
     Title="MainWindow"
     Width="900"
     Height="550"
-    MinWidth="900"
+    MinWidth="1100"
     MinHeight="700"
     Background="#F5F5F5">
     <Window.Resources>
@@ -22,7 +22,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="300" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -31,7 +31,6 @@
             Grid.Row="0"
             Grid.ColumnSpan="2"
             Padding="10"
-            Background="#333"
             CornerRadius="15">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -42,7 +41,7 @@
                 <!--  Бутони за навигация  -->
                 <StackPanel
                     Grid.Column="0"
-                    Margin="5"
+                    Margin="0"
                     Orientation="Horizontal">
                     <Button
                         Padding="10,5"
@@ -51,6 +50,7 @@
                         Command="{Binding OpenFacilityCommand}"
                         Content="Хотелски удобства"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                     <Button
                         Padding="10,5"
@@ -59,6 +59,7 @@
                         Command="{Binding OpenPaymentMethodCommand}"
                         Content="Методи за плащане"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                     <Button
                         Padding="10,5"
@@ -67,6 +68,7 @@
                         Command="{Binding OpenRoomTypeCommand}"
                         Content="Типове стаи"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                     <Button
                         Padding="10,5"
@@ -75,6 +77,7 @@
                         Command="{Binding OpenHotelConfigurationCommand}"
                         Content="Хотели"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                     <Button
                         Padding="10,5"
@@ -83,6 +86,7 @@
                         Command="{Binding OpenReservationCreatingCommand}"
                         Content="Резервация"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                     <Button
                         Padding="10,5"
@@ -91,6 +95,7 @@
                         Command="{Binding OpenReservationsListCommand}"
                         Content="Списък с резервации"
                         FontSize="14"
+                        FontWeight="Bold"
                         Foreground="White" />
                 </StackPanel>
 
@@ -98,9 +103,21 @@
                 <Border
                     Grid.Column="1"
                     Margin="10,0,0,0"
-                    Background="#555"
                     CornerRadius="15" />
             </Grid>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="#43cea2" />
+                    <GradientStop Offset="1" Color="#185a9d" />
+                </LinearGradientBrush>
+
+
+                <!--<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#11998e" Offset="0"/>
+                    <GradientStop Color="#38ef7d" Offset="1"/>
+                </LinearGradientBrush>-->
+
+            </Border.Background>
         </Border>
 
         <!--  Логин панел  -->
@@ -110,7 +127,6 @@
             Grid.Column="0"
             Margin="10"
             Padding="15"
-            Background="White"
             CornerRadius="10">
             <local:UserView DataContext="{Binding UserViewModel}" />
         </Border>
@@ -131,16 +147,31 @@
                     Text="Отворени табове:" />
 
                 <!--  Списък с отворени табове  -->
-
                 <ItemsControl ItemsSource="{Binding OpenTabs}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border
+                                Margin="5"
                                 Padding="5"
-                                Background="{Binding IsActive, Converter={StaticResource BooleanToActiveTabColorConverter}}"
+                                BorderThickness="2"
                                 CornerRadius="5">
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <!--  Default: неактивен таб  -->
+                                        <Setter Property="Background" Value="White" />
+                                        <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}" />
+                                        <Style.Triggers>
+                                            <!--  Активен таб  -->
+                                            <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                                <Setter Property="Background" Value="{StaticResource SecondaryBrush}" />
+                                                <Setter Property="BorderBrush" Value="Transparent" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+
                                 <Grid>
-                                    <!--  Това ще направи така, че цялата зона да е кликваема  -->
+                                    <!--  Цялата зона кликваема  -->
                                     <Button
                                         Background="Transparent"
                                         BorderBrush="Transparent"
@@ -149,25 +180,66 @@
                                             <TextBlock
                                                 Margin="5,0,15,0"
                                                 VerticalAlignment="Center"
-                                                Text="{Binding Title}" />
+                                                FontSize="14"
+                                                FontWeight="Bold"
+                                                Text="{Binding Title}"
+                                                TextWrapping="Wrap">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <!--  Default: неактивен  -->
+                                                        <Setter Property="Foreground" Value="Black" />
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                                                <Setter Property="Foreground" Value="White" />
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
                                         </Grid>
                                     </Button>
 
-                                    <!--  Бутонът за затваряне, който остава вдясно  -->
+                                    <!--  Бутон за затваряне  -->
                                     <Button
-                                        Padding="0,5"
+                                        Padding="0,0"
                                         HorizontalAlignment="Right"
                                         VerticalAlignment="Center"
                                         Background="Transparent"
                                         BorderBrush="Transparent"
                                         Command="{Binding CloseCommand}"
                                         Content="✖"
-                                        Foreground="Red" />
+                                        Cursor="Hand"
+                                        FontSize="15">
+                                        <Button.Style>
+                                            <Style TargetType="Button">
+                                                <!--  Default: неактивен таб  -->
+                                                <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+                                                <Setter Property="Background" Value="Transparent" />
+                                                <Setter Property="BorderBrush" Value="Transparent" />
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="Button">
+                                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                <Style.Triggers>
+                                                    <!--  Активен таб  -->
+                                                    <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                                        <Setter Property="Foreground" Value="White" />
+                                                        <Setter Property="Background" Value="Red" />
+                                                        <Setter Property="FontSize" Value="18" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
+                                    </Button>
                                 </Grid>
                             </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
 
             </StackPanel>
         </Border>
@@ -179,9 +251,16 @@
             Grid.Column="1"
             Margin="10"
             Padding="15"
-            Background="White"
+            Background="{StaticResource MainGradientBrush}"
             CornerRadius="10">
             <ContentControl Content="{Binding SelectedView, UpdateSourceTrigger=PropertyChanged}" />
+            <!--<Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0" Color="#43cea2" />
+                    <GradientStop Offset="1" Color="#185a9d" />
+                </LinearGradientBrush>
+
+            </Border.Background>-->
         </Border>
     </Grid>
 </Window>

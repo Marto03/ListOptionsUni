@@ -13,46 +13,34 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="1.5*" />
         </Grid.ColumnDefinitions>
+
+        <!--  Лява част  -->
         <StackPanel>
             <!--  Текстово поле за въвеждане  -->
-            <TextBox
-                Height="35"
-                Padding="5"
-                Background="White"
-                BorderBrush="#4CAF50"
-                BorderThickness="2"
-                FontSize="14"
-                Text="{Binding NewFacilityName, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox helpers:PlaceholderHelper.PlaceholderText="Въведете хотелско удобство" Text="{Binding NewFacilityName, UpdateSourceTrigger=PropertyChanged}" />
 
             <!--  Бутон за добавяне  -->
             <Button
                 Width="130"
                 Height="40"
-                Margin="0,10,0,10"
-                Background="#4CAF50"
-                BorderThickness="0"
                 Command="{Binding AddFacilityCommand}"
-                Content="➕ Добави"
-                Cursor="Hand"
-                FontWeight="Bold"
-                Foreground="White" />
+                Content="➕ Добави" />
 
             <!--  Styled ListBox  -->
-            <ListBox
-                MaxHeight="350"
-                Padding="5"
-                Background="#F5F5F5"
-                BorderThickness="0"
-                ItemsSource="{Binding Facilities}">
+            <ListBox MaxHeight="350" ItemsSource="{Binding Facilities}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Border
                             Margin="5"
-                            Padding="5"
+                            Padding="10"
                             Background="White"
-                            BorderBrush="Gray"
-                            BorderThickness="1"
-                            CornerRadius="10">
+                            CornerRadius="8">
+                            <Border.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="6"
+                                    Opacity="0.15"
+                                    ShadowDepth="2" />
+                            </Border.Effect>
 
                             <Grid Height="60">
                                 <Grid.ColumnDefinitions>
@@ -60,35 +48,30 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <!--  Основен елемент с име (ТЕКСТЪТ ОСТАВА СТАБИЛЕН)  -->
+                                <!--  Име  -->
                                 <TextBlock
                                     x:Name="FacilityName"
                                     Grid.Column="0"
-                                    Padding="10"
                                     VerticalAlignment="Center"
                                     FontSize="16"
                                     FontWeight="Bold"
-                                    RenderTransformOrigin="0.5,0.5"
+                                    Foreground="#333"
                                     Text="{Binding Name}">
                                     <TextBlock.RenderTransform>
                                         <TranslateTransform x:Name="TextTransform" X="0" />
                                     </TextBlock.RenderTransform>
                                 </TextBlock>
 
-                                <!--  Бутон за изтриване (СЛЕДВАЩО ДВИЖЕНИЕ)  -->
+                                <!--  Бутон за изтриване  -->
                                 <Button
                                     x:Name="DeleteButton"
                                     Grid.Column="1"
-                                    Width="60"
-                                    Height="40"
-                                    Background="Red"
-                                    BorderThickness="0"
+                                    Width="40"
+                                    Height="35"
+                                    Background="{StaticResource CloseButtonBrush}"
                                     Command="{Binding DataContext.DeleteFacilityCommand, RelativeSource={RelativeSource AncestorType=ListBox}}"
                                     CommandParameter="{Binding}"
                                     Content="❌"
-                                    Cursor="Hand"
-                                    FontWeight="Bold"
-                                    Foreground="White"
                                     Visibility="Collapsed">
                                     <Button.RenderTransform>
                                         <TranslateTransform x:Name="ButtonTransform" X="40" />
@@ -97,21 +80,18 @@
 
                                 <!--  Анимации  -->
                                 <Grid.Triggers>
-                                    <!--  При кликване, бутонът идва отдясно  -->
+                                    <!--  Показване  -->
                                     <EventTrigger RoutedEvent="UIElement.MouseLeftButtonDown">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <!--  Бутонът се появява и плъзга  -->
                                                 <DoubleAnimation
                                                     Storyboard.TargetName="ButtonTransform"
                                                     Storyboard.TargetProperty="X"
                                                     To="0"
                                                     Duration="0:0:0.2" />
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DeleteButton" Storyboard.TargetProperty="Visibility">
-                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0.0" Value="{x:Static Visibility.Visible}" />
+                                                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}" />
                                                 </ObjectAnimationUsingKeyFrames>
-
-                                                <!--  Текстът леко се измества наляво  -->
                                                 <DoubleAnimation
                                                     Storyboard.TargetName="TextTransform"
                                                     Storyboard.TargetProperty="X"
@@ -121,11 +101,10 @@
                                         </BeginStoryboard>
                                     </EventTrigger>
 
-                                    <!--  При клик другаде, бутонът изчезва  -->
+                                    <!--  Скриване  -->
                                     <EventTrigger RoutedEvent="UIElement.MouseRightButtonDown">
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <!--  Бутонът се скрива  -->
                                                 <DoubleAnimation
                                                     Storyboard.TargetName="ButtonTransform"
                                                     Storyboard.TargetProperty="X"
@@ -134,8 +113,6 @@
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetName="DeleteButton" Storyboard.TargetProperty="Visibility">
                                                     <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
                                                 </ObjectAnimationUsingKeyFrames>
-
-                                                <!--  Текстът се връща на място  -->
                                                 <DoubleAnimation
                                                     Storyboard.TargetName="TextTransform"
                                                     Storyboard.TargetProperty="X"
@@ -150,12 +127,11 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
         </StackPanel>
+
+        <!--  Дясна част  -->
         <StackPanel Grid.Column="1" Margin="15,0,0,0">
-
             <local:HotelFacilityEditorView DataContext="{Binding HotelFacilityEditorViewModel}" />
-
         </StackPanel>
     </Grid>
 </UserControl>

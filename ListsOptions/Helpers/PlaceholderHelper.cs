@@ -111,6 +111,7 @@ namespace ListsOptionsUI.Helpers
                 Text = placeholderText,
                 Foreground = Brushes.Gray,
                 Margin = new Thickness(5, 2, 0, 0),
+                FontSize = 15,
                 IsHitTestVisible = false // ТОВА ПОЗВОЛЯВА КЛИКОВЕТЕ ДА МИНАВАТ ПРЕЗ ТЕКСТА!
             };
 
